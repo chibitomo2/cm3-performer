@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1874,1489</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1874,3583</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CM3_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -123,7 +123,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="552,1424" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="606,3518" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
     </Sequence.Variables>
@@ -132,9 +132,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="490,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]" />
-    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="490,140" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="490,952" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]" />
+    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="544,140" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="544,3046" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="506,2818" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
           <uix:NApplicationCard.Body>
@@ -152,7 +152,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBefore="8" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="410,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="WindowMessages" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V3" />
+                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBefore="10" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="410,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V3" />
                 <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="410,25" sap2010:WorkflowViewState.IdRef="GetFromClipboard_1">
                   <ui:GetFromClipboard.Result>
                     <OutArgument x:TypeArguments="x:String">[page_text]</OutArgument>
@@ -269,21 +269,11 @@
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;NEW VALUE: &quot; + value.text]" />
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Push Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_apikey">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.PushoverAPIKey" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_userkey">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.PushoverUserKey" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_message">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.LastValue + &quot; &gt; &quot; + value.text" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_title">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.Name + &quot; (&quot; + record.Site + &quot;)&quot;" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_url">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.MainURL" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[record.PushoverAPIKey]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[record.PushoverUserKey]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_message">[record.LastValue + " &gt; " + value.text]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_title">[record.Name + " (" + record.Site + ")"]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_url">[record.MainURL]</InArgument>
                           <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
                           <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
                         </ui:InvokeWorkflowFile.Arguments>
@@ -320,10 +310,10 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,789" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="510,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -331,7 +321,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="450,720" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence sap:VirtualizedContainerService.HintSize="450,634" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -340,21 +330,11 @@
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Push Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_apikey">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.PushoverAPIKey" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_userkey">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.PushoverUserKey" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_message">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.LastValue + &quot; &gt; &quot; + &quot;ERROR&quot;" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_title">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.Name + &quot; (&quot; + record.Site + &quot;)&quot;" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_url">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.MainURL" />
-                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[record.PushoverAPIKey]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[record.PushoverUserKey]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_message">[record.LastValue + " &gt; " + "ERROR"]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_title">[record.Name + " (" + record.Site + ")"]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_url">[record.MainURL]</InArgument>
                   <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
                   <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
                 </ui:InvokeWorkflowFile.Arguments>
