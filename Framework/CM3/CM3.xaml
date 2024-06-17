@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>827,2128</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1874,1677</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CM3_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -123,7 +123,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="572,2063" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="552,1612" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
     </Sequence.Variables>
@@ -132,7 +132,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,84" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="490,83" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -141,8 +141,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="510,142" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000" />
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,84" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + record.Name]">
+    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="490,140" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000" />
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="490,83" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + record.Name]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -151,7 +151,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,84" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + record.Site]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="490,83" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + record.Site]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -160,35 +160,36 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="510,1398" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="490,952" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="472,1165" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If sap2010:Annotation.AnnotationText="Pre-process" Condition="[record.PreProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="410,445" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap2010:Annotation.AnnotationText="Pre-process" Condition="[record.PreProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="410,442" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,231" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running pre-process&quot;]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running pre-process&quot;]" />
               </Sequence>
             </If.Then>
             <If.Else>
               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
             </If.Else>
           </If>
-          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="410,84" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="410,83" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -383,20 +384,20 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <If sap2010:Annotation.AnnotationText="Post-process" Condition="[record.PostProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="410,445" sap2010:WorkflowViewState.IdRef="If_3">
+          <If sap2010:Annotation.AnnotationText="Post-process" Condition="[record.PostProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="410,442" sap2010:WorkflowViewState.IdRef="If_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,231" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running post-process&quot;]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running post-process&quot;]" />
               </Sequence>
             </If.Then>
             <If.Else>
@@ -406,10 +407,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,789" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -417,13 +418,13 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="450,722" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence sap:VirtualizedContainerService.HintSize="450,720" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Push Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[record.PushoverAPIKey]</InArgument>
