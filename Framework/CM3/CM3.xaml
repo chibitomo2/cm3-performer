@@ -250,7 +250,7 @@
                       </isactr:FieldObject>
                       <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
                         <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:Int32">65535</InArgument>
+                          <InArgument x:TypeArguments="x:Int32">4096</InArgument>
                         </isactr:FieldObject.Value>
                       </isactr:FieldObject>
                       <isactr:FieldObject Name="n" Type="FieldArgument">
