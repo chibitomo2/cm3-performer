@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>658,5543.5</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1874,5190</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CM3_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -123,7 +123,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="668,5478.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="670,5125" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
     </Sequence.Variables>
@@ -132,7 +132,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,84" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="608,83" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -141,8 +141,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="606,142" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000" />
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,84" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + record.Name]">
+    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="608,140" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000" />
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="608,83" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + record.Name]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -151,7 +151,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,84" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + record.Site]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="608,83" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + record.Site]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -160,30 +160,30 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="606,4813.5" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="606,5581" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="568,4581.5" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="568,5353" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If sap2010:Annotation.AnnotationText="Pre-process" Condition="[record.PreProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="506,653" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap2010:Annotation.AnnotationText="Pre-process" Condition="[record.PreProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="506,648" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,439" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,435" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running Pre-Process (&quot; + record.PreProcess.ToString + &quot;)&quot;]" />
-                <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="[record.PreProcess.ToString]" UsePackage="False">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running Pre-Process (&quot; + record.PreProcess.ToString + &quot;)&quot;]" />
+                <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="[record.PreProcess.ToString]" UsePackage="False">
                   <ui:InvokeProcess.Arguments>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:InvokeProcess.Arguments>
@@ -194,13 +194,13 @@
               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
             </If.Else>
           </If>
-          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="506,3084.5" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="506,3861" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,2846.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,3663" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="page_text" />
                     <Variable x:TypeArguments="uiascb:v2_sub_chat_sub_completion_Create" Name="value" />
@@ -210,7 +210,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Trace Log Message" sap:VirtualizedContainerService.HintSize="410,53" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Start CTRL+C&quot;]">
+                  <ui:LogMessage DisplayName="Trace Log Message" sap:VirtualizedContainerService.HintSize="410,52" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Start CTRL+C&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -218,8 +218,8 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBefore="10" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="410,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V3" />
-                  <ui:LogMessage DisplayName="Trace Log Message" sap:VirtualizedContainerService.HintSize="410,53" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;End CTRL+C&quot;]">
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBefore="10" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="410,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V3" />
+                  <ui:LogMessage DisplayName="Trace Log Message" sap:VirtualizedContainerService.HintSize="410,52" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;End CTRL+C&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -232,81 +232,174 @@
                       <OutArgument x:TypeArguments="x:String">[page_text]</OutArgument>
                     </ui:GetFromClipboard.Result>
                   </ui:GetFromClipboard>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,145" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT: &quot; + record.Prompt]" />
-                  <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="410,290.5" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
-                    <isactr:ConnectorActivity.FieldObjects>
-                      <isactr:FieldObject Name="model" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:String">gpt-4o</InArgument>
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="prompt" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:String">[record.Prompt + " " + page_text]</InArgument>
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="image_type" Type="FieldArgument" />
-                      <isactr:FieldObject Name="_file" Type="FieldArgument" />
-                      <isactr:FieldObject Name="image_url" Type="FieldArgument" />
-                      <isactr:FieldObject Name="instruction" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:String" />
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:Int32">4096</InArgument>
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="n" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:Int32">1</InArgument>
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="temperature" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:Double">1</InArgument>
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="top_p" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:Double">1</InArgument>
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="_stop" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:String" />
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:Double">0</InArgument>
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:Double">0</InArgument>
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="user" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <InArgument x:TypeArguments="x:String" />
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="out_text" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <OutArgument x:TypeArguments="x:String" />
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                      <isactr:FieldObject Name="Jit_v2_sub_chat_sub_completion" Type="FieldArgument">
-                        <isactr:FieldObject.Value>
-                          <OutArgument x:TypeArguments="uiascb:v2_sub_chat_sub_completion_Create">[value]</OutArgument>
-                        </isactr:FieldObject.Value>
-                      </isactr:FieldObject>
-                    </isactr:ConnectorActivity.FieldObjects>
-                  </isactr:ConnectorActivity>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,145" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT RESULT: &quot; + value.text]" />
-                  <If Condition="[record.LastValue = value.text]" sap:VirtualizedContainerService.HintSize="410,1560" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="410,1298" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,558" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;CUSTOM PROMPT: &quot; + record.Prompt]" />
+                        <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="334,287" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
+                          <isactr:ConnectorActivity.FieldObjects>
+                            <isactr:FieldObject Name="model" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String">gpt-4o</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String">[record.Prompt + " " + page_text]</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="image_type" Type="FieldArgument" />
+                            <isactr:FieldObject Name="_file" Type="FieldArgument" />
+                            <isactr:FieldObject Name="image_url" Type="FieldArgument" />
+                            <isactr:FieldObject Name="instruction" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String" />
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Int32">4096</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="n" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="temperature" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Double">1</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="top_p" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Double">1</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="_stop" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String" />
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Double">0</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Double">0</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="user" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String" />
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <OutArgument x:TypeArguments="x:String" />
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="Jit_v2_sub_chat_sub_completion" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <OutArgument x:TypeArguments="uiascb:v2_sub_chat_sub_completion_Create">[value]</OutArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                          </isactr:ConnectorActivity.FieldObjects>
+                        </isactr:ConnectorActivity>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,558" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT TEMPLATE: &quot; + record.PromptTemplate.Prompt]" />
+                        <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="334,287" sap2010:WorkflowViewState.IdRef="ConnectorActivity_2" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
+                          <isactr:ConnectorActivity.FieldObjects>
+                            <isactr:FieldObject Name="model" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String">gpt-4o</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String">[record.PromptTemplate.Prompt + " " + page_text]</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="image_type" Type="FieldArgument" />
+                            <isactr:FieldObject Name="_file" Type="FieldArgument" />
+                            <isactr:FieldObject Name="image_url" Type="FieldArgument" />
+                            <isactr:FieldObject Name="instruction" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String" />
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Int32">4096</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="n" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="temperature" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Double">1</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="top_p" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Double">1</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="_stop" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String" />
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Double">0</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:Double">0</InArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="user" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <InArgument x:TypeArguments="x:String" />
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <OutArgument x:TypeArguments="x:String" />
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                            <isactr:FieldObject Name="Jit_v2_sub_chat_sub_completion" Type="FieldArgument">
+                              <isactr:FieldObject.Value>
+                                <OutArgument x:TypeArguments="uiascb:v2_sub_chat_sub_completion_Create">[value]</OutArgument>
+                              </isactr:FieldObject.Value>
+                            </isactr:FieldObject>
+                          </isactr:ConnectorActivity.FieldObjects>
+                        </isactr:ConnectorActivity>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT RESULT: &quot; + value.text]" />
+                  <If Condition="[record.LastValue = value.text]" sap:VirtualizedContainerService.HintSize="410,1559" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="376,495" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <sap:WorkflowViewStateService.ViewState>
