@@ -10,7 +10,8 @@
     "UiPath.System.Activities": "[23.10.6]",
     "UiPath.Testing.Activities": "[23.10.1]",
     "UiPath.UIAutomation.Activities": "[23.10.11]",
-    "UiPath.WebAPI.Activities": "[1.20.1]"
+    "UiPath.WebAPI.Activities": "[1.20.1]",
+    "UiPathTeam.TextComparison.Activities": "[2.1.0]"
   },
   "webServices": [],
   "entitiesStores": [
@@ -23,7 +24,7 @@
   ],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.7.0",
-  "projectVersion": "1.0.51",
+  "projectVersion": "1.0.52",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
