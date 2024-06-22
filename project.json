@@ -18,12 +18,12 @@
       "serviceDocument": ".entities/EntitiesStore.json",
       "tenantName": "Production",
       "namespace": "Change_Monitor_3_Performer",
-      "uniqueReference": "zgfEX6YiYwqGsBzOiA/f6C0vlf0XzfIU/ylMJwPtCps="
+      "uniqueReference": "WHBOPIPy+L+yC/6plN9mUf36TougFGJcWsj0A+voAUo="
     }
   ],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.7.0",
-  "projectVersion": "1.0.49",
+  "projectVersion": "1.0.50",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
