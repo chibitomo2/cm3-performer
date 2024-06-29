@@ -1,11 +1,17 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CM3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Change_Monitor_3_Performer;assembly=DataService.Change_Monitor_3_Performer" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ta="clr-namespace:TextComparison.Activities;assembly=TextComparison.Activities" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CA8F03D417B_v2_sub_chat_sub_completion_Create.Bundle;assembly=CA8F03D417B_v2_sub_c.5QpAW1BeTZQ1oy51n1Pch2P1" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CM3" this:CM3.bc4_working_dir="C:\cm3" this:CM3.bc4_filepath="C:\Program Files\Beyond Compare 4\BCompare.exe" this:CM3.bc4_left_filename="old.txt" this:CM3.bc4_right_filename="new.txt" this:CM3.bc4_output_filename="report.html" this:CM3.bc4_script_filename="script.txt" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Change_Monitor_3_Performer;assembly=DataService.Change_Monitor_3_Performer" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ta="clr-namespace:TextComparison.Activities;assembly=TextComparison.Activities" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CA8F03D417B_v2_sub_chat_sub_completion_Create.Bundle;assembly=CA8F03D417B_v2_sub_c.5QpAW1BeTZQ1oy51n1Pch2P1" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="id" Type="InArgument(x:String)" />
+    <x:Property Name="bc4_working_dir" Type="InArgument(x:String)" />
+    <x:Property Name="bc4_filepath" Type="InArgument(x:String)" />
+    <x:Property Name="bc4_left_filename" Type="InArgument(x:String)" />
+    <x:Property Name="bc4_right_filename" Type="InArgument(x:String)" />
+    <x:Property Name="bc4_output_filename" Type="InArgument(x:String)" />
+    <x:Property Name="bc4_script_filename" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1387,6163</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1037,8065</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CM3_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -61,6 +67,8 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>TextComparison.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -133,14 +141,15 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
       <AssemblyReference>TextComparison.Activities</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="907,6098" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="922,8000" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
       <Variable x:TypeArguments="x:String" Name="current_url" />
       <Variable x:TypeArguments="uiascb:v2_sub_chat_sub_completion_Create" Name="value" />
-      <Variable x:TypeArguments="x:String" Name="page_text" />
+      <Variable x:TypeArguments="x:String" Name="new_text" />
       <Variable x:TypeArguments="x:String" Name="screenshot_filepath" />
       <Variable x:TypeArguments="scg:List(scg:KeyValuePair(x:String, x:String))" Name="comparison_result" />
       <Variable x:TypeArguments="x:String" Name="old_text" />
@@ -151,7 +160,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="845,56" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -160,8 +169,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="845,142" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000" />
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="845,56" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + record.Name]">
+    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="860,142" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000" />
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + record.Name]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -170,7 +179,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="845,56" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + record.Site]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + record.Site]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -179,9 +188,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="845,5517" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="860,7419" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="807,5284" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="822,7186" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -189,10 +198,12 @@
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If sap2010:Annotation.AnnotationText="Pre-process" Condition="[record.PreProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="745,653" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap2010:Annotation.AnnotationText="Pre-process" Condition="[record.PreProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="760,56" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
@@ -214,19 +225,19 @@
               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
             </If.Else>
           </If>
-          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="622,2302" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="760,6883" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="588,2104" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,6685" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope sap2010:Annotation.AnnotationText="Copy page text into clipboard, then into a variable" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="526,85" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="30" RetryInterval="00:00:01">
+                  <ui:RetryScope sap2010:Annotation.AnnotationText="Copy page text into clipboard, then into a variable" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="664,972" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="30" RetryInterval="00:00:01">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,764" sap2010:WorkflowViewState.IdRef="Sequence_13">
@@ -300,7 +311,7 @@
                           </ui:LogMessage>
                           <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="GetFromClipboard_1">
                             <ui:GetFromClipboard.Result>
-                              <OutArgument x:TypeArguments="x:String">[page_text]</OutArgument>
+                              <OutArgument x:TypeArguments="x:String">[new_text]</OutArgument>
                             </ui:GetFromClipboard.Result>
                           </ui:GetFromClipboard>
                         </Sequence>
@@ -311,28 +322,28 @@
                     </ui:RetryScope.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:RetryScope>
-                  <If sap2010:Annotation.AnnotationText="If the check is a full page diff check..." Condition="[cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="526,69" sap2010:WorkflowViewState.IdRef="If_5">
+                  <If sap2010:Annotation.AnnotationText="If the check is a full page diff check..." Condition="[cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="664,3290" sap2010:WorkflowViewState.IdRef="If_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="300,596" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <Sequence sap:VirtualizedContainerService.HintSize="630,1900" sap2010:WorkflowViewState.IdRef="Sequence_14">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <TryCatch sap2010:Annotation.AnnotationText="Get or set old text" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="258,56" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch sap2010:Annotation.AnnotationText="Get or set old text" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="588,56" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -341,10 +352,12 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <ucas:ReadStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Try to get the old value from storage" DisplayName="Read Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="[&quot;old-&quot;+record.Id.ToString]" Result="[old_text]" StorageBucketName="ChecksStorage">
+                            <ucas:ReadStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Try to get the old value from storage" DisplayName="Read Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="[&quot;old-&quot;+record.Id.ToString]" Result="[old_text]" StorageBucketName="ChecksStorage">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ucas:ReadStorageText>
@@ -369,7 +382,7 @@
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Create it for the first time" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="388,220" sap2010:WorkflowViewState.IdRef="WriteStorageText_1" Path="[&quot;old-&quot;+record.Id.ToString]" StorageBucketName="ChecksStorage" Text="[page_text]">
+                                  <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Create it for the first time" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="388,220" sap2010:WorkflowViewState.IdRef="WriteStorageText_1" Path="[&quot;old-&quot;+record.Id.ToString]" StorageBucketName="ChecksStorage" Text="[new_text]">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -390,7 +403,7 @@
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <ta:CompareText ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Do a diff between old and current version of the text" sap:VirtualizedContainerService.HintSize="258,69" sap2010:WorkflowViewState.IdRef="CompareText_1" Result="[comparison_result]" Text1="[old_text]" Text2="[page_text]">
+                        <ta:CompareText ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Do a diff between old and current version of the text" sap:VirtualizedContainerService.HintSize="588,69" sap2010:WorkflowViewState.IdRef="CompareText_1" Result="[comparison_result]" Text1="[old_text]" Text2="[new_text]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -399,7 +412,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ta:CompareText>
-                        <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Convert the diff report to a string for the prompt" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="258,69" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[comparison_result]">
+                        <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Convert the diff report to a string for the prompt" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="588,69" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[comparison_result]">
                           <ui:ForEach.Body>
                             <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                               <ActivityAction.Argument>
@@ -430,7 +443,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ForEach>
-                        <If sap2010:Annotation.AnnotationText="Run custom or template prompt against the diff results" Condition="[record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="258,85" sap2010:WorkflowViewState.IdRef="If_6">
+                        <If sap2010:Annotation.AnnotationText="Run custom or template prompt against the diff results" Condition="[record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="588,85" sap2010:WorkflowViewState.IdRef="If_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -453,7 +466,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:LogMessage>
-                              <isactr:ConnectorActivity sap2010:Annotation.AnnotationText="Compare page with custom prompt" Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="258,69" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
+                              <isactr:ConnectorActivity sap2010:Annotation.AnnotationText="Compare page with custom prompt" Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="258,69" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
                                 <isactr:ConnectorActivity.FieldObjects>
                                   <isactr:FieldObject Name="model" Type="FieldArgument">
                                     <isactr:FieldObject.Value>
@@ -549,7 +562,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:LogMessage>
-                              <isactr:ConnectorActivity sap2010:Annotation.AnnotationText="Compare page with prompt template" Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="258,69" sap2010:WorkflowViewState.IdRef="ConnectorActivity_5" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
+                              <isactr:ConnectorActivity sap2010:Annotation.AnnotationText="Compare page with prompt template" Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="258,69" sap2010:WorkflowViewState.IdRef="ConnectorActivity_5" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
                                 <isactr:ConnectorActivity.FieldObjects>
                                   <isactr:FieldObject Name="model" Type="FieldArgument">
                                     <isactr:FieldObject.Value>
@@ -631,53 +644,170 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <If sap2010:Annotation.AnnotationText="Save historical copy of the old text" Condition="[old_text &lt;&gt; page_text]" sap:VirtualizedContainerService.HintSize="258,69" sap2010:WorkflowViewState.IdRef="If_7">
+                        <If sap2010:Annotation.AnnotationText="If old and new text are different:&#xA;- Archive copy of the old text&#xA;- Save the new text as the old text for the next run&#xA;- Download both files and create a diff report with BC4&#xA;- Upload BC4 diff to record" Condition="[old_text &lt;&gt; new_text]" sap:VirtualizedContainerService.HintSize="588,1373" sap2010:WorkflowViewState.IdRef="If_7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="376,581" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                            <Sequence sap:VirtualizedContainerService.HintSize="554,1098" sap2010:WorkflowViewState.IdRef="Sequence_23">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save historical copy" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="WriteStorageText_3" Path="[&quot;old-&quot;+record.Id.ToString+&quot;--&quot;+now.ToString(&quot;yyyy-MM-dd--HH-mm-ss&quot;)]" StorageBucketName="ChecksStorage" Text="[old_text]">
+                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save archive copy" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="512,56" sap2010:WorkflowViewState.IdRef="WriteStorageText_3" Path="[&quot;old-&quot;+record.Id.ToString+&quot;--&quot;+now.ToString(&quot;yyyy-MM-dd--HH-mm-ss&quot;)]" StorageBucketName="ChecksStorage" Text="[old_text]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ucas:WriteStorageText>
-                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save the current page text as the old text for next time" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,233" sap2010:WorkflowViewState.IdRef="WriteStorageText_2" Path="[&quot;old-&quot;+record.Id.ToString]" StorageBucketName="ChecksStorage" Text="[page_text]">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ucas:WriteStorageText>
+                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save the current page text as the old text for next time" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="512,69" sap2010:WorkflowViewState.IdRef="WriteStorageText_2" Path="[&quot;old-&quot;+record.Id.ToString]" StorageBucketName="ChecksStorage" Text="[new_text]">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ucas:WriteStorageText>
+                              <Sequence sap2010:Annotation.AnnotationText="Write old and new text into BC4 working directory" DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="512,805" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="upload_diff_report_filepath" />
+                                  <Variable x:TypeArguments="upr:ILocalResource" Name="diff_file" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Write old text as left file" DisplayName="Write Text File" FileName="[bc4_working_dir+&quot;\&quot;+bc4_left_filename]" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[old_text]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:WriteTextFile>
+                                <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Write new text as right file" DisplayName="Write Text File" FileName="[bc4_working_dir+&quot;\&quot;+bc4_right_filename]" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[new_text]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:WriteTextFile>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create BC4 Diff Report.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Create BC4 Diff Report.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_bcompare_exe_filepath">[bc4_filepath]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_bc_script_filepath">[bc4_working_dir+"\"+bc4_script_filename]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_left_filepath">[bc4_working_dir+"\"+bc4_left_filename]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_right_filepath">[bc4_working_dir+"\"+bc4_right_filename]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_output_html_filepath">[bc4_working_dir+"\"+bc4_output_filename]</InArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                                <ui:LogMessage sap2010:Annotation.AnnotationText="Uploading &lt;diff file&gt;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Uploading: &quot;+ bc4_working_dir+&quot;\&quot;+bc4_output_filename]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:LogMessage>
+                                <ui:RetryScope sap2010:Annotation.AnnotationText="Upload diff report to record. BC4 may not be finished with the file immediately, so retry upload for 20s" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="450,101" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="20" RetryInterval="00:00:01">
+                                  <ui:RetryScope.ActivityBody>
+                                    <ActivityAction>
+                                      <uda:UploadFileToRecordField x:TypeArguments="c:ChangeMonitorChecks" FilePath="{x:Null}" OutputEntity="{x:Null}" sap2010:Annotation.AnnotationText="Upload diff file to record" ContinueOnError="False" DisplayName="Upload File to Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" Field="DiffReport" FileResource="[LocalResource.FromPath(bc4_working_dir+&quot;\&quot;+bc4_output_filename)]" sap:VirtualizedContainerService.HintSize="334,279" sap2010:WorkflowViewState.IdRef="UploadFileToRecordField`1_4" RecordId="[Guid.Parse(id)]" TimeoutInMs="30000">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uda:UploadFileToRecordField>
+                                    </ActivityAction>
+                                  </ui:RetryScope.ActivityBody>
+                                  <ui:RetryScope.Condition>
+                                    <ActivityFunc x:TypeArguments="x:Boolean" />
+                                  </ui:RetryScope.Condition>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:RetryScope>
+                                <Sequence sap2010:Annotation.AnnotationText="Clean up working directory" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:DeleteFileX sap2010:Annotation.AnnotationText="Delete left file" DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[bc4_working_dir+&quot;\&quot;+bc4_left_filename]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:DeleteFileX>
+                                  <ui:DeleteFileX sap2010:Annotation.AnnotationText="Delete right file" DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[bc4_working_dir+&quot;\&quot;+bc4_right_filename]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:DeleteFileX>
+                                  <ui:DeleteFileX sap2010:Annotation.AnnotationText="Delete output file" DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="[bc4_working_dir+&quot;\&quot;+bc4_output_filename]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:DeleteFileX>
+                                </Sequence>
+                              </Sequence>
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_24" />
+                            <Sequence sap:VirtualizedContainerService.HintSize="300,81" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
                           </If.Else>
                         </If>
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="615,1037" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <Sequence sap:VirtualizedContainerService.HintSize="615,1176" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If sap2010:Annotation.AnnotationText="Regular non-fullpage check" Condition="[record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="573,949" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If sap2010:Annotation.AnnotationText="Regular non-fullpage check" Condition="[record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="573,1088" sap2010:WorkflowViewState.IdRef="If_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -686,24 +816,25 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="376,298" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <Sequence sap:VirtualizedContainerService.HintSize="539,437" sap2010:WorkflowViewState.IdRef="Sequence_11">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;CUSTOM PROMPT: &quot; + record.Prompt]" />
-                              <Switch x:TypeArguments="x:Boolean" DisplayName="Switch" Expression="[cbool(record.UseVision)]" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497,145" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;CUSTOM PROMPT: &quot; + record.Prompt]" />
+                              <Switch x:TypeArguments="x:Boolean" DisplayName="Switch" Expression="[cbool(record.UseVision)]" sap:VirtualizedContainerService.HintSize="497,164" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence x:Key="True" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                <Sequence x:Key="True" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:LogMessage sap2010:Annotation.AnnotationText="Using vision recognition" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Using vision recognition&quot;]">
@@ -715,7 +846,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LogMessage>
-                                  <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="ConnectorActivity_7" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
+                                  <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACu1b/W7bNhD/f0DfgfA/24DYtZykX0D/SNym9ZoPt3FbYFsR0DJtc5FIjaTseEXfoA+wF9iL9Ul2R0m2ZMmy4qZNEyQJEtt3PJH3uy8emY/3fiKkdsCZN9BtKQzlgqnaE/IRPwfKKaPKHdO+xyIeIP3xYSsmdkQQmsXn0ackGWtZjqnPgFbz5YB5ta0U5RnXgUdnCcMRMhD7LsPFtKt4YLgUyNUbM+JRNcLfYhRSeGElk18OD49+JUaSUDMylIoY4ISJG+JKP/AYCmiQZ2xIQ89oZBwFpr7TyDysNwvsXLRRXIwypFOpzIkaWN042Qlake+oF9qxVmy9+cDZzox/LkI/raMlPVmeIhlplk9blUdvN3brJlR9WXec5oNNpezUJ1yD4uqBYhPOplk5izcflhDjIwQrIxoUgEb0VjN1MmFK8QE+xaiQZaZT60rNE7C7ivtUzVJPTc+99obpQApdIAdIf4dcsUEByZrroXRp8pR9OZhloDoRbSomVBcM7mg7fM/FwV2qmDAxV8K0mGGRFwQKjNGUuUG3gCPvAhwdb421EwVKYNpsZOKtCoheCqqrw6OapmE6I3ZmcLUl2u4gF8lz5TWOPEQOiZWLmtdMDAj1pBiRKTdjQonPtEYiT7iooN5Mc03gRzA2YIONsNjeOI5Eyxtyj20SAaLRb98cfo3bp/wlkyMKnw38EWuimdOxnKb1EjO9CT1WIK1QYjSADe1EVmajFG9Htz1IetZYh9TTbBXbe6nOh56cPr+A8KgxTpaPSCZhFbxi+pZxbehNvj7kP0zBU8iTxX49Ai8xUF8jArkM8f0AWM7hOZaSJPs1CKXfpl3sciG3zPGWXX69060GvADu6mBXcrbLIl0R56puloNwCcAP1UPretf6Hnpe4VLfVs2rnamaK10OhRU56lprP5uG19Yiea5sLbLgwiKkz7ACHCxKwIrVX+4p6Xpj58am9eKi74fK7StKsluQ0S+l/GtJ68UFbfJ1l6rXo3it+brUdW5Qlr6Eir9zqi5zkG+TgI+gdcYDqsxV7fhDVdplXKxwXYclYdx8r0/IsTQMljCGz6bc84gU3oxMAblIDGbsF91efedd1MTcpDmwe5esb1LCuMvV11cn3b599Q+frK8ildzl6m9dDV1qt1wxGQvIW6E1/9J0vIptadO7YNNkFEJFZnPnXgeTs7LHQAM4E4G8PKUzIME5iE+NO2aazGSogGRgt549/hOh5zW+VcZNx5NT5sL01kWUqz8B8enFmZHnDMJU2bErvSC9Aq58RQTyuB/6oDi/zxSehUTSoTCC4JFqQkSHXFARDciIwWkyNUCkQk+ZapADBn/mIxWc40LIIewigPd8wrIYbT/aaRZjhIiOAI5VID3IKFgqMId42HarVnJ86zxuNRvNG4JwqWsdl+G5l0IRnAWyhDbEgYq1h7XqgBmmfLgIoAmkLABezNKdJXcsuQu02AVtZasYdO+WDtidzaB7uCl0NwY3w/wA3SJUpQ3B3iq2LJZfPv9Lvnz+j7z6U8xh7TMzZUyQpvXCFgD7ko/GQJjYrE08fs5Is/EoAs+n8A7RlKHBc2Vfgl8qGCn9LTIdY68RPXx5dCs1msejhtK1DUl8bGJGXBvuVjKNaPYrLeNRsWUMZAg3C26JacjgLCg1ChmQbiXXztpA5NwJkAh2xLZlXw+XozKsXkOahdrxKoB7fPuB04BcGW6nOXoWtrcBqncHWg3QthcYXqfgr3Gd042jLD4kyalQopBhqICeANewAEeRGFzQsAsTDRMS74XYu11WnhWTPOiKqiLHuSFA4R4H130GFQf1zKz8Mk7ES7pFvFkAj7NeV281kuDbbJBo4ROWRFD7bP4POCGbJm7Xpxg4Ib8C8BGqYzYjNAhgC0di5CymWsLuDByXC1dB4kZDQJptIf0cRWePj6UEE5DEUO+c0D5E9vhZAXd1FvPmRj7ttDZ16ptTYA3tIZpwZ1WM5SBh/r7WAtBzBQU0ZlkMCfNZFJnMgFUwGcXA5EwUKWBtQBUwFab6oF3/Skxn+/abDlRBqsxa8CJkeRoPBQckCWRhYfiQg7UAMDYgWaDtxhb60nV8ki3T3DFxqSBj5gXkBGwm2h77UnADO7OkInNhZ9aHMVcV93duCCD9ZSlLgOTp+S2w7P+F+suxluhqhUY6Gs6VANmlJaxTxeK4ZL7o6MX8SvaJLeGr3cnG0LCu1nwx38H3ctwFtyQx2CR9AKwyor1iqg/Qn8X7xo2MbUXvJXfXFC4+FPQwy28MR6R2aOdZwJEDI1L111vmb9ycTVpPnuD9Xfg932iXQZPAQtrY7GqvGJMFqFDjb3mXmnGjg5tyrCqlOGVqApg1sHk9AbdlunH6/jkEHfuyvffooLn9bMd5uA+TPtNh/wznHb2YT+OsDWnGsMZ+KAYea6xl3CJFchu7r4O9984+6/3+2pGzXUc4XXfc6jpb5B1T2Kh+ChsE/Ibx4BmwUX4qWGgU9bZIF3IJd1+xme1uPcUAV6toJhsgnSZ1NCBqZSybQeyr+CcyCdvZpFBhwn0iQBb2yzr1vxfxInEGdp3JBGptKQQEIqlgeTbZQEww47rEQoHHf+bMMY6zBPHEwucRwwa1xLDKDLH20pjgCIpTiSvDqB7FoXgtbQodV9CbPA+D+enAxwxxX8kppKsOdEDSxC51z6GbnVnvbrLexWozdGcbfmKOqkuoQVqMjNwqwppeTFla2slpLyage+BH9yet+yj1fk7oYfyfKMgFET2WR/U+yD+HcAYuKkZWGdbS7v306X8ADbc5dTMAAA==" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="ConnectorActivity_7" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
                                     <isactr:ConnectorActivity.FieldObjects>
                                       <isactr:FieldObject Name="model" Type="FieldArgument">
                                         <isactr:FieldObject.Value>
@@ -802,7 +933,7 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                   </isactr:ConnectorActivity>
                                 </Sequence>
-                                <Sequence x:Key="False" sap:VirtualizedContainerService.HintSize="450,497.5" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                <Sequence x:Key="False" sap:VirtualizedContainerService.HintSize="450,294" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -817,7 +948,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LogMessage>
-                                  <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="388,290.5" sap2010:WorkflowViewState.IdRef="ConnectorActivity_6" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
+                                  <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="388,290.5" sap2010:WorkflowViewState.IdRef="ConnectorActivity_6" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
                                     <isactr:ConnectorActivity.FieldObjects>
                                       <isactr:FieldObject Name="model" Type="FieldArgument">
                                         <isactr:FieldObject.Value>
@@ -826,7 +957,7 @@
                                       </isactr:FieldObject>
                                       <isactr:FieldObject Name="prompt" Type="FieldArgument">
                                         <isactr:FieldObject.Value>
-                                          <InArgument x:TypeArguments="x:String">[record.Prompt + " " + page_text]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">[record.Prompt + " " + new_text]</InArgument>
                                         </isactr:FieldObject.Value>
                                       </isactr:FieldObject>
                                       <isactr:FieldObject Name="image_type" Type="FieldArgument" />
@@ -914,10 +1045,11 @@
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence x:Key="True" sap:VirtualizedContainerService.HintSize="450,549.5" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                <Sequence x:Key="True" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:LogMessage sap2010:Annotation.AnnotationText="Using vision recognition" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Using vision recognition&quot;]">
@@ -929,7 +1061,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LogMessage>
-                                  <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="388,342.5" sap2010:WorkflowViewState.IdRef="ConnectorActivity_8" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
+                                  <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="388,342.5" sap2010:WorkflowViewState.IdRef="ConnectorActivity_8" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
                                     <isactr:ConnectorActivity.FieldObjects>
                                       <isactr:FieldObject Name="model" Type="FieldArgument">
                                         <isactr:FieldObject.Value>
@@ -1016,7 +1148,7 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                   </isactr:ConnectorActivity>
                                 </Sequence>
-                                <Sequence x:Key="False" sap:VirtualizedContainerService.HintSize="450,497.5" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                <Sequence x:Key="False" sap:VirtualizedContainerService.HintSize="450,233" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1031,7 +1163,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LogMessage>
-                                  <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="388,290.5" sap2010:WorkflowViewState.IdRef="ConnectorActivity_9" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
+                                  <isactr:ConnectorActivity Configuration="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" ConnectionId="b58a9a0e-fac8-4bfd-81a6-6ba8f03d417b" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="ConnectorActivity_9" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
                                     <isactr:ConnectorActivity.FieldObjects>
                                       <isactr:FieldObject Name="model" Type="FieldArgument">
                                         <isactr:FieldObject.Value>
@@ -1040,7 +1172,7 @@
                                       </isactr:FieldObject>
                                       <isactr:FieldObject Name="prompt" Type="FieldArgument">
                                         <isactr:FieldObject.Value>
-                                          <InArgument x:TypeArguments="x:String">[record.PromptTemplate.Prompt + " " + page_text]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">[record.PromptTemplate.Prompt + " " + new_text]</InArgument>
                                         </isactr:FieldObject.Value>
                                       </isactr:FieldObject>
                                       <isactr:FieldObject Name="image_type" Type="FieldArgument" />
@@ -1104,7 +1236,7 @@
                                     </isactr:ConnectorActivity.FieldObjects>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
@@ -1117,7 +1249,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:SetToClipboard sap2010:Annotation.AnnotationText="Clear clipboard" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="526,56" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
+                  <ui:SetToClipboard sap2010:Annotation.AnnotationText="Clear clipboard" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="664,56" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
                     <ui:SetToClipboard.Text>
                       <InArgument x:TypeArguments="x:String">
                         <Literal x:TypeArguments="x:String" Value="" />
@@ -1131,7 +1263,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:SetToClipboard>
-                  <ui:LogMessage sap2010:Annotation.AnnotationText="&quot;PROMPT RESULT &lt;New Value&gt;&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526,69" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT RESULT: &quot; + value.text]">
+                  <ui:LogMessage sap2010:Annotation.AnnotationText="&quot;PROMPT RESULT &lt;New Value&gt;&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="664,69" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT RESULT: &quot; + value.text]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1140,7 +1272,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <If sap2010:Annotation.AnnotationText="If the last value is the same as the new value:&#xD;&#xA;- Update the last checked date&#xD;&#xA;Otherwise:&#xD;&#xA;- update the last value with the current value, and send a push notification" Condition="[record.LastValue = value.text]" sap:VirtualizedContainerService.HintSize="526,1550" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If sap2010:Annotation.AnnotationText="If the last value is the same as the new value:&#xA;- Update the last checked date&#xA;Otherwise:&#xA;- update the last value with the current value, and send a push notification" Condition="[record.LastValue = value.text]" sap:VirtualizedContainerService.HintSize="664,2023" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1149,21 +1281,21 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="492,168" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence sap:VirtualizedContainerService.HintSize="492,641" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap2010:Annotation.AnnotationText="...Simply update the last checked date" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <Sequence sap2010:Annotation.AnnotationText="...Simply update the last checked date" sap:VirtualizedContainerService.HintSize="450,553" sap2010:WorkflowViewState.IdRef="Sequence_20">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;No change in value&quot;]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;No change in value&quot;]" />
                           <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="388,226" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(), .Id = guid.Parse(id) }]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000">
                             <uda:UpdateEntityRecord.State>
                               <udam:RecordState RequiredFieldCount="2">
@@ -1260,21 +1392,11 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for fullpage checkss" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_apikey">
-                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.PushoverKey.APIKey" />
-                                                </InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_userkey">
-                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.PushoverKey.UserKey" />
-                                                </InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_message">
-                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="value.text" />
-                                                </InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_title">
-                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.Name + &quot; (&quot; + record.Site + &quot;)&quot;" />
-                                                </InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_url">
-                                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.MainURL" />
-                                                </InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[record.PushoverKey.APIKey]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[record.PushoverKey.UserKey]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_message">[value.text]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_title">[record.Name + " (" + record.Site + ")"]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_url">[record.MainURL]</InArgument>
                                                 <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
                                                 <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
                                               </ui:InvokeWorkflowFile.Arguments>
@@ -1309,21 +1431,11 @@
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for non-fullpage checks" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="258,69" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_apikey">
-                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.PushoverKey.APIKey" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_userkey">
-                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.PushoverKey.UserKey" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_message">
-                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.LastValue + &quot; --&gt; &quot; + value.text" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_title">
-                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.Name + &quot; (&quot; + record.Site + &quot;)&quot;" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_url">
-                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="record.MainURL" />
-                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[record.PushoverKey.APIKey]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[record.PushoverKey.UserKey]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_message">[record.LastValue + " --&gt; " + value.text]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_title">[record.Name + " (" + record.Site + ")"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_url">[record.MainURL]</InArgument>
                                           <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
                                           <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -1359,7 +1471,7 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Update record:&#xD;&#xA;- new value&#xD;&#xA;- last checked date" ContinueOnError="False" DisplayName="Update Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_2" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(),  .LastValue = value.text, .Id = guid.Parse(id) }]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000">
+                          <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Update record:&#xA;- new value&#xA;- last checked date" ContinueOnError="False" DisplayName="Update Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_2" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(),  .LastValue = value.text, .Id = guid.Parse(id) }]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000">
                             <uda:UpdateEntityRecord.State>
                               <udam:RecordState RequiredFieldCount="2">
                                 <udam:RecordState.SelectedFields>
@@ -1404,10 +1516,12 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <If sap2010:Annotation.AnnotationText="Post-process" Condition="[record.PostProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="745,653" sap2010:WorkflowViewState.IdRef="If_3">
+          <If sap2010:Annotation.AnnotationText="Post-process" Condition="[record.PostProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="760,56" sap2010:WorkflowViewState.IdRef="If_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
@@ -1432,7 +1546,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="811,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="826,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1443,14 +1557,14 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="472,1250" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence sap:VirtualizedContainerService.HintSize="472,1252" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
-              <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="410,643" sap2010:WorkflowViewState.IdRef="If_9">
+              <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="410,227" sap2010:WorkflowViewState.IdRef="If_9">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
