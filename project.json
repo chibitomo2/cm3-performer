@@ -24,7 +24,7 @@
   ],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.7.0",
-  "projectVersion": "1.0.80",
+  "projectVersion": "1.0.82",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -104,6 +104,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Framework\\CM3\\Tests\\CM3_TestCase.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "a247813e-8047-4a07-bfde-4a5409c8e310",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\CM3\\Tests\\TC01 - Pre and Post Processes Initial Run.xaml"
       }
     ],
     "saveToCloud": false
