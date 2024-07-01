@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1770,8445</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1757,1930</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CM3_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -145,7 +145,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="922,8380" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="574,1865" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
       <Variable x:TypeArguments="x:String" Name="current_url" />
@@ -161,7 +161,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,56" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -170,8 +170,31 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="860,140" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000" />
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + record.Name]">
+    <Assign sap2010:Annotation.AnnotationText="Convert id to guid variable for use throughout the process" sap:VirtualizedContainerService.HintSize="512,67" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:Guid">[record_id]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:Guid">[guid.Parse(id)]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" sap2010:Annotation.AnnotationText="Get record from Data Service" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="512,56" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[record_id]" TimeoutInMs="30000">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uda:GetEntityRecordById>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,56" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + record.Name]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -180,7 +203,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + record.Site]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,56" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + record.Site]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -189,9 +212,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="860,7801" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="512,1263" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="822,7572" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="822,7536" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -226,13 +249,13 @@
               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
             </If.Else>
           </If>
-          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="760,7269" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="760,7249" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,7071" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,7051" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -271,7 +294,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NTakeScreenshot>
-                          <uda:UploadFileToRecordField x:TypeArguments="c:ChangeMonitorChecks" FilePath="{x:Null}" OutputEntity="{x:Null}" sap2010:Annotation.AnnotationText="Update check with screenshot" ContinueOnError="False" DisplayName="Upload File to Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" Field="Screenshot" FileResource="[LocalResource.FromPath(&quot;screenshot.png&quot;)]" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="UploadFileToRecordField`1_1" RecordId="[guid.Parse(id)]" TimeoutInMs="30000">
+                          <uda:UploadFileToRecordField x:TypeArguments="c:ChangeMonitorChecks" FilePath="{x:Null}" OutputEntity="{x:Null}" sap2010:Annotation.AnnotationText="Update check with screenshot" ContinueOnError="False" DisplayName="Upload File to Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" Field="Screenshot" FileResource="[LocalResource.FromPath(&quot;screenshot.png&quot;)]" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="UploadFileToRecordField`1_1" RecordId="[record_id]" TimeoutInMs="30000">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -725,10 +748,10 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:LogMessage>
-                                <ui:RetryScope sap2010:Annotation.AnnotationText="Upload diff report to record. BC4 may not be finished with the file immediately, so retry upload for 20s" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="450,97" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="20" RetryInterval="00:00:01">
+                                <ui:RetryScope sap2010:Annotation.AnnotationText="Upload diff report to record. BC4 may not be finished with the file immediately, so retry upload for 20s" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="20" RetryInterval="00:00:01">
                                   <ui:RetryScope.ActivityBody>
                                     <ActivityAction>
-                                      <uda:UploadFileToRecordField x:TypeArguments="c:ChangeMonitorChecks" FilePath="{x:Null}" OutputEntity="{x:Null}" sap2010:Annotation.AnnotationText="Upload diff file to record" ContinueOnError="False" DisplayName="Upload File to Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" Field="DiffReport" FileResource="[LocalResource.FromPath(bc4_working_dir+&quot;\&quot;+bc4_output_filename)]" sap:VirtualizedContainerService.HintSize="334,279" sap2010:WorkflowViewState.IdRef="UploadFileToRecordField`1_4" RecordId="[Guid.Parse(id)]" TimeoutInMs="30000">
+                                      <uda:UploadFileToRecordField x:TypeArguments="c:ChangeMonitorChecks" FilePath="{x:Null}" OutputEntity="{x:Null}" sap2010:Annotation.AnnotationText="Upload diff file to record" ContinueOnError="False" DisplayName="Upload File to Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" Field="DiffReport" FileResource="[LocalResource.FromPath(bc4_working_dir+&quot;\&quot;+bc4_output_filename)]" sap:VirtualizedContainerService.HintSize="334,273" sap2010:WorkflowViewState.IdRef="UploadFileToRecordField`1_4" RecordId="[record_id]" TimeoutInMs="30000">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1273,7 +1296,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <If sap2010:Annotation.AnnotationText="If the last value is the same as the new value:&#xA;- Update the last checked date&#xA;Otherwise:&#xA;- update the last value with the current value, and send a push notification" Condition="[record.LastValue = value.text]" sap:VirtualizedContainerService.HintSize="664,2023" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If sap2010:Annotation.AnnotationText="If the last value is the same as the new value:&#xA;- Update the last checked date&#xA;Otherwise:&#xA;- update the last value with the current value, and send a push notification" Condition="[record.LastValue = value.text]" sap:VirtualizedContainerService.HintSize="664,2003" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1282,13 +1305,13 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="492,641" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence sap:VirtualizedContainerService.HintSize="492,637" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap2010:Annotation.AnnotationText="...Simply update the last checked date" sap:VirtualizedContainerService.HintSize="450,553" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <Sequence sap2010:Annotation.AnnotationText="...Simply update the last checked date" sap:VirtualizedContainerService.HintSize="450,549" sap2010:WorkflowViewState.IdRef="Sequence_20">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1296,8 +1319,8 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;No change in value&quot;]" />
-                          <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="388,226" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(), .Id = guid.Parse(id) }]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;No change in value&quot;]" />
+                          <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="388,224" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(), .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
                             <uda:UpdateEntityRecord.State>
                               <udam:RecordState RequiredFieldCount="2">
                                 <udam:RecordState.SelectedFields>
@@ -1316,13 +1339,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="492,1123" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence sap:VirtualizedContainerService.HintSize="492,1112" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap2010:Annotation.AnnotationText="Update the last value with the current value, and send a push notification" sap:VirtualizedContainerService.HintSize="450,1035" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                        <Sequence sap2010:Annotation.AnnotationText="Update the last value with the current value, and send a push notification" sap:VirtualizedContainerService.HintSize="450,1024" sap2010:WorkflowViewState.IdRef="Sequence_21">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1348,20 +1371,20 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:LogMessage>
-                          <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="388,576" sap2010:WorkflowViewState.IdRef="If_8">
+                          <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="388,568" sap2010:WorkflowViewState.IdRef="If_8">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="300,205" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                              <Sequence sap:VirtualizedContainerService.HintSize="300,200" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <If sap2010:Annotation.AnnotationText="If the change is from a fullpage check, and if it is not &quot;no changes&quot;, send only the new value. Otherwise, send both old and new values" Condition="[cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="258,117" sap2010:WorkflowViewState.IdRef="If_10">
+                                <If sap2010:Annotation.AnnotationText="If the change is from a fullpage check, and if it is not &quot;no changes&quot;, send only the new value. Otherwise, send both old and new values" Condition="[cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="258,112" sap2010:WorkflowViewState.IdRef="If_10">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1472,7 +1495,7 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Update record:&#xA;- new value&#xA;- last checked date" ContinueOnError="False" DisplayName="Update Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_2" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(),  .LastValue = value.text, .Id = guid.Parse(id) }]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000">
+                          <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Update record:&#xA;- new value&#xA;- last checked date" ContinueOnError="False" DisplayName="Update Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_2" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(),  .LastValue = value.text, .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
                             <uda:UpdateEntityRecord.State>
                               <udam:RecordState RequiredFieldCount="2">
                                 <udam:RecordState.SelectedFields>
@@ -1547,10 +1570,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="826,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="478,1100" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -1558,14 +1581,14 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="472,1252" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence sap:VirtualizedContainerService.HintSize="472,1031" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
-              <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="410,227" sap2010:WorkflowViewState.IdRef="If_9">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,141" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
+              <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="410,643" sap2010:WorkflowViewState.IdRef="If_9">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1602,7 +1625,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="410,275" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_3" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(),  .LastValue = &quot;ERROR&quot;, .Id = guid.Parse(id) }]" RecordId="[guid.Parse(id)]" TimeoutInMs="30000">
+              <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Update Last Value to &quot;ERROR&quot;" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="410,56" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_3" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(),  .LastValue = &quot;ERROR&quot;, .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
                 <uda:UpdateEntityRecord.State>
                   <udam:RecordState RequiredFieldCount="2">
                     <udam:RecordState.SelectedFields>
@@ -1621,6 +1644,13 @@
                     </udam:RecordState.SelectedFields>
                   </udam:RecordState>
                 </uda:UpdateEntityRecord.State>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </uda:UpdateEntityRecord>
             </Sequence>
           </ActivityAction>
