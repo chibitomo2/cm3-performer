@@ -145,9 +145,8 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="922,6040" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="934,6040" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="c:ChangeMonitorChecks" sap2010:Annotation.AnnotationText="The current record (check) from Data Service loaded into the process" Name="record" />
       <Variable x:TypeArguments="uiascb:v2_sub_chat_sub_completion_Create" sap2010:Annotation.AnnotationText="Output variable of Generate Chat Completion activities" Name="llm_output" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Text copied to the clipboard" Name="new_text" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The filepath of the screenshot taken during process execution" Name="screenshot_filepath" />
@@ -160,7 +159,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;ID&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="872,56" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ID: &quot; + id]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -169,7 +168,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Assign sap2010:Annotation.AnnotationText="Convert id to guid variable for use throughout the process" sap:VirtualizedContainerService.HintSize="860,67" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap2010:Annotation.AnnotationText="Convert id to guid variable for use throughout the process" sap:VirtualizedContainerService.HintSize="872,67" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="s:Guid">[record_id]</OutArgument>
       </Assign.To>
@@ -184,7 +183,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" sap2010:Annotation.AnnotationText="Get record from Data Service" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[record_id]" TimeoutInMs="30000">
+    <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" sap2010:Annotation.AnnotationText="Get record from Data Service" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="872,56" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[GlobalVariablesNamespace.GlobalVariables.record]" RecordId="[record_id]" TimeoutInMs="30000">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -193,7 +192,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uda:GetEntityRecordById>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + record.Name]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Name&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="872,56" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Name: &quot; + GlobalVariablesNamespace.GlobalVariables.record.Name]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -202,7 +201,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860,56" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + record.Site]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log record &quot;Site&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="872,56" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Site: &quot; + GlobalVariablesNamespace.GlobalVariables.record.Site]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -211,9 +210,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="860,5438" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="872,5438" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="822,5210" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="834,5210" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -221,7 +220,7 @@
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If sap2010:Annotation.AnnotationText="Pre-process" Condition="[record.PreProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="760,56" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap2010:Annotation.AnnotationText="Pre-process" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PreProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="772,56" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -230,14 +229,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,439" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,435" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running Pre-Process (&quot; + record.PreProcess.ToString + &quot;)&quot;]" />
-                <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="[record.PreProcess.ToString]" UsePackage="False">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running Pre-Process (&quot; + GlobalVariablesNamespace.GlobalVariables.record.PreProcess.ToString + &quot;)&quot;]" />
+                <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="[GlobalVariablesNamespace.GlobalVariables.record.PreProcess.ToString]" UsePackage="False">
                   <ui:InvokeProcess.Arguments>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:InvokeProcess.Arguments>
@@ -248,19 +247,19 @@
               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
             </If.Else>
           </If>
-          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="760,4907" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="772,4907" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,4709" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="738,4709" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope sap2010:Annotation.AnnotationText="Copy page text into clipboard, then into a variable" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="664,67" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="30" RetryInterval="00:00:01">
+                  <ui:RetryScope sap2010:Annotation.AnnotationText="Copy page text into clipboard, then into a variable" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="676,67" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="30" RetryInterval="00:00:01">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,1168" sap2010:WorkflowViewState.IdRef="Sequence_13">
@@ -271,7 +270,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <uix:NKeyboardShortcuts ActivateBefore="True" sap2010:Annotation.AnnotationText="Wait for page to completely load before continuing" ClickBeforeMode="None" DelayAfter="1" DelayBefore="0" DelayBetweenShortcuts="0.8" DisplayName="Send Shortcut" sap:VirtualizedContainerService.HintSize="388,67" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" InteractionMode="DebuggerApi" ScopeIdentifier="05193200-5562-4010-8f71-d38aba8dd2d5" Shortcuts="[d(hk)][d(shift)][u(shift)][u(hk)]" Version="V3">
                             <uix:NKeyboardShortcuts.Target>
-                              <uix:TargetAnchorable BrowserURL="https://www.rosindalepavitt.co.uk/property-details/rps_rop-WLL240064/-/-/wallington-10" DesignTimeRectangle="12, 113, 1895, 1454" DesignTimeScaleFactor="1" FriendlyName="'We use'" FullSelectorArgument="&lt;webctrl tag='BODY' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BODY' /&gt;" Guid="ef8c9dcc-264c-4eea-8c2e-6c1edfac116e" InformativeScreenshot="fcfcac0bc689ac1a52dacf26a429259f.png" ScopeSelectorArgument="[record.MainWindowSelector]" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                              <uix:TargetAnchorable BrowserURL="https://www.rosindalepavitt.co.uk/property-details/rps_rop-WLL240064/-/-/wallington-10" DesignTimeRectangle="12, 113, 1895, 1454" DesignTimeScaleFactor="1" FriendlyName="'We use'" FullSelectorArgument="&lt;webctrl tag='BODY' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BODY' /&gt;" Guid="ef8c9dcc-264c-4eea-8c2e-6c1edfac116e" InformativeScreenshot="fcfcac0bc689ac1a52dacf26a429259f.png" ScopeSelectorArgument="[GlobalVariablesNamespace.GlobalVariables.record.MainWindowSelector]" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
                             </uix:NKeyboardShortcuts.Target>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -313,7 +312,7 @@
                           </ui:LogMessage>
                           <uix:NKeyboardShortcuts ActivateBefore="True" sap2010:Annotation.AnnotationText="Copy all text for regular recognition" ClickBeforeMode="None" DelayAfter="1" DelayBefore="0" DelayBetweenShortcuts="0.8" DisplayName="Copy All Text On Screen" sap:VirtualizedContainerService.HintSize="388,67" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="DebuggerApi" ScopeIdentifier="05193200-5562-4010-8f71-d38aba8dd2d5" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V3">
                             <uix:NKeyboardShortcuts.Target>
-                              <uix:TargetAnchorable BrowserURL="https://www.rosindalepavitt.co.uk/property-details/rps_rop-WLL240064/-/-/wallington-10" DesignTimeRectangle="12, 113, 1895, 1454" DesignTimeScaleFactor="1" FriendlyName="'We use'" FullSelectorArgument="&lt;webctrl tag='BODY' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BODY' /&gt;" Guid="ef8c9dcc-264c-4eea-8c2e-6c1edfac116e" InformativeScreenshot="fcfcac0bc689ac1a52dacf26a429259f.png" ScopeSelectorArgument="[record.MainWindowSelector]" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                              <uix:TargetAnchorable BrowserURL="https://www.rosindalepavitt.co.uk/property-details/rps_rop-WLL240064/-/-/wallington-10" DesignTimeRectangle="12, 113, 1895, 1454" DesignTimeScaleFactor="1" FriendlyName="'We use'" FullSelectorArgument="&lt;webctrl tag='BODY' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BODY' /&gt;" Guid="ef8c9dcc-264c-4eea-8c2e-6c1edfac116e" InformativeScreenshot="fcfcac0bc689ac1a52dacf26a429259f.png" ScopeSelectorArgument="[GlobalVariablesNamespace.GlobalVariables.record.MainWindowSelector]" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
                             </uix:NKeyboardShortcuts.Target>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -351,7 +350,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:RetryScope>
-                  <If sap2010:Annotation.AnnotationText="If the check is a full page diff check..." Condition="[cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="664,4087" sap2010:WorkflowViewState.IdRef="If_5">
+                  <If sap2010:Annotation.AnnotationText="If the check is a full page diff check..." Condition="[cbool(GlobalVariablesNamespace.GlobalVariables.record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="676,4087" sap2010:WorkflowViewState.IdRef="If_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -375,7 +374,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <ucas:ReadStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Try to get the old value from storage" DisplayName="Read Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="[record.Id.ToString]" Result="[old_text]" StorageBucketName="[storage_bucket]">
+                            <ucas:ReadStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Try to get the old value from storage" DisplayName="Read Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" Result="[old_text]" StorageBucketName="[storage_bucket]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -405,7 +404,7 @@
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Create it for the first time" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="388,217" sap2010:WorkflowViewState.IdRef="WriteStorageText_1" Path="[record.Id.ToString]" StorageBucketName="[storage_bucket]" Text="[new_text]">
+                                  <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Create it for the first time" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="388,217" sap2010:WorkflowViewState.IdRef="WriteStorageText_1" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" StorageBucketName="[storage_bucket]" Text="[new_text]">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -414,7 +413,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ucas:WriteStorageText>
-                                  <ucas:ReadStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Try to get the old value from storage" DisplayName="Read Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="388,164" sap2010:WorkflowViewState.IdRef="ReadStorageText_2" Path="[record.Id.ToString]" Result="[old_text]" StorageBucketName="[storage_bucket]">
+                                  <ucas:ReadStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Try to get the old value from storage" DisplayName="Read Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="388,164" sap2010:WorkflowViewState.IdRef="ReadStorageText_2" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" Result="[old_text]" StorageBucketName="[storage_bucket]">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -466,7 +465,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ForEach>
-                        <If sap2010:Annotation.AnnotationText="Run custom or template prompt against the diff results" Condition="[record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="588,82" sap2010:WorkflowViewState.IdRef="If_6">
+                        <If sap2010:Annotation.AnnotationText="Run custom or template prompt against the diff results" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="588,82" sap2010:WorkflowViewState.IdRef="If_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -481,7 +480,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="258,25" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;CUSTOM PROMPT: &quot; + record.Prompt]">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="258,25" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;CUSTOM PROMPT: &quot; + GlobalVariablesNamespace.GlobalVariables.record.Prompt]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -577,7 +576,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT TEMPLATE: &quot; + record.PromptTemplate.Prompt]">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT TEMPLATE: &quot; + GlobalVariablesNamespace.GlobalVariables.record.PromptTemplate.Prompt]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -682,7 +681,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save archive copy" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="512,217" sap2010:WorkflowViewState.IdRef="WriteStorageText_3" Path="[now.ToString(&quot;yyyy-MM-dd--HH-mm-ss&quot;)+&quot;--&quot;+record.Id.ToString]" StorageBucketName="[storage_bucket]" Text="[old_text]">
+                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save archive copy" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="512,217" sap2010:WorkflowViewState.IdRef="WriteStorageText_3" Path="[now.ToString(&quot;yyyy-MM-dd--HH-mm-ss&quot;)+&quot;--&quot;+GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" StorageBucketName="[storage_bucket]" Text="[old_text]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -691,7 +690,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ucas:WriteStorageText>
-                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save the current page text as the old text for next time" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="512,217" sap2010:WorkflowViewState.IdRef="WriteStorageText_2" Path="[record.Id.ToString]" StorageBucketName="[storage_bucket]" Text="[new_text]">
+                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save the current page text as the old text for next time" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="512,217" sap2010:WorkflowViewState.IdRef="WriteStorageText_2" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" StorageBucketName="[storage_bucket]" Text="[new_text]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -768,7 +767,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:RetryScope>
-                                <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="[now.ToString(&quot;yyyy-MM-dd--HH-mm-ss&quot;)+&quot;--&quot;+record.Id.ToString+&quot;--&quot;+bc4_output_filename]" DisplayName="Upload Storage File" sap:VirtualizedContainerService.HintSize="450,239" sap2010:WorkflowViewState.IdRef="UploadStorageFile_2" Path="[bc4_working_dir+&quot;\&quot;+bc4_output_filename]" StorageBucketName="[storage_bucket]" />
+                                <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="[now.ToString(&quot;yyyy-MM-dd--HH-mm-ss&quot;)+&quot;--&quot;+GlobalVariablesNamespace.GlobalVariables.record.Id.ToString+&quot;--&quot;+bc4_output_filename]" DisplayName="Upload Storage File" sap:VirtualizedContainerService.HintSize="450,239" sap2010:WorkflowViewState.IdRef="UploadStorageFile_2" Path="[bc4_working_dir+&quot;\&quot;+bc4_output_filename]" StorageBucketName="[storage_bucket]" />
                                 <Sequence sap2010:Annotation.AnnotationText="Clean up working directory" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -821,13 +820,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="615,1163" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <Sequence sap:VirtualizedContainerService.HintSize="642,1163" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If sap2010:Annotation.AnnotationText="Regular non-fullpage check" Condition="[record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="573,1075" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If sap2010:Annotation.AnnotationText="Regular non-fullpage check" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="600,1075" sap2010:WorkflowViewState.IdRef="If_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -836,14 +835,14 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="539,431" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <Sequence sap:VirtualizedContainerService.HintSize="566,431" sap2010:WorkflowViewState.IdRef="Sequence_11">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;CUSTOM PROMPT: &quot; + record.Prompt]" />
-                              <Switch x:TypeArguments="x:Boolean" DisplayName="Switch" Expression="[cbool(record.UseVision)]" sap:VirtualizedContainerService.HintSize="497,160" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;CUSTOM PROMPT: &quot; + GlobalVariablesNamespace.GlobalVariables.record.Prompt]" />
+                              <Switch x:TypeArguments="x:Boolean" DisplayName="Switch" Expression="[cbool(GlobalVariablesNamespace.GlobalVariables.record.UseVision)]" sap:VirtualizedContainerService.HintSize="524,160" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1051,14 +1050,14 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="539,431" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <Sequence sap:VirtualizedContainerService.HintSize="566,431" sap2010:WorkflowViewState.IdRef="Sequence_12">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497,143" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT TEMPLATE: &quot; + record.PromptTemplate.Prompt]" />
-                              <Switch x:TypeArguments="x:Boolean" DisplayName="Switch" Expression="[cbool(record.UseVision)]" sap:VirtualizedContainerService.HintSize="497,160" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524,143" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT TEMPLATE: &quot; + GlobalVariablesNamespace.GlobalVariables.record.PromptTemplate.Prompt]" />
+                              <Switch x:TypeArguments="x:Boolean" DisplayName="Switch" Expression="[cbool(GlobalVariablesNamespace.GlobalVariables.record.UseVision)]" sap:VirtualizedContainerService.HintSize="524,160" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1269,7 +1268,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:SetToClipboard sap2010:Annotation.AnnotationText="Clear clipboard" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="664,56" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
+                  <ui:SetToClipboard sap2010:Annotation.AnnotationText="Clear clipboard" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="676,56" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
                     <ui:SetToClipboard.Text>
                       <InArgument x:TypeArguments="x:String">
                         <Literal x:TypeArguments="x:String" Value="" />
@@ -1283,7 +1282,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:SetToClipboard>
-                  <ui:LogMessage sap2010:Annotation.AnnotationText="&quot;PROMPT RESULT &lt;New Value&gt;&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="664,67" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT RESULT: &quot; + llm_output.text]">
+                  <ui:LogMessage sap2010:Annotation.AnnotationText="&quot;PROMPT RESULT &lt;New Value&gt;&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="676,67" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;PROMPT RESULT: &quot; + llm_output.text]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1292,7 +1291,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <If sap2010:Annotation.AnnotationText="If the last value is the same as the new value:&#xA;- Update the last checked date&#xA;Otherwise:&#xA;- update the last value with the current value, and send a push notification" Condition="[record.LastValue = llm_output.text]" sap:VirtualizedContainerService.HintSize="664,157" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If sap2010:Annotation.AnnotationText="If the last value is the same as the new value:&#xA;- Update the last checked date&#xA;Otherwise:&#xA;- update the last value with the current value, and send a push notification" Condition="[GlobalVariablesNamespace.GlobalVariables.record.LastValue = llm_output.text]" sap:VirtualizedContainerService.HintSize="676,157" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1349,7 +1348,7 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage sap2010:Annotation.AnnotationText="Old value" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;OLD VALUE: &quot; + record.LastValue]">
+                          <ui:LogMessage sap2010:Annotation.AnnotationText="Old value" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;OLD VALUE: &quot; + GlobalVariablesNamespace.GlobalVariables.record.LastValue]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1367,7 +1366,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:LogMessage>
-                          <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="388,568" sap2010:WorkflowViewState.IdRef="If_8">
+                          <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="388,568" sap2010:WorkflowViewState.IdRef="If_8">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1380,7 +1379,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <If sap2010:Annotation.AnnotationText="If the change is from a fullpage check, and if it is not &quot;no changes&quot;, send only the new value. Otherwise, send both old and new values" Condition="[cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="258,112" sap2010:WorkflowViewState.IdRef="If_10">
+                                <If sap2010:Annotation.AnnotationText="If the change is from a fullpage check, and if it is not &quot;no changes&quot;, send only the new value. Otherwise, send both old and new values" Condition="[cbool(GlobalVariablesNamespace.GlobalVariables.record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="258,112" sap2010:WorkflowViewState.IdRef="If_10">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1412,11 +1411,11 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for fullpage checkss" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[record.PushoverKey.APIKey]</InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[record.PushoverKey.UserKey]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
                                                 <InArgument x:TypeArguments="x:String" x:Key="in_message">[llm_output.text]</InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_title">[record.Name + " (" + record.Site + ")"]</InArgument>
-                                                <InArgument x:TypeArguments="x:String" x:Key="in_url">[record.MainURL]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
                                                 <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
                                                 <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
                                               </ui:InvokeWorkflowFile.Arguments>
@@ -1451,11 +1450,11 @@
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for non-fullpage checks" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="258,69" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[record.PushoverKey.APIKey]</InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[record.PushoverKey.UserKey]</InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_message">[record.LastValue + " --&gt; " + llm_output.text]</InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_title">[record.Name + " (" + record.Site + ")"]</InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_url">[record.MainURL]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_message">[GlobalVariablesNamespace.GlobalVariables.record.LastValue + " --&gt; " + llm_output.text]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
                                           <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
                                           <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -1526,7 +1525,7 @@
               </ActivityAction>
             </uix:NApplicationCard.Body>
             <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="33, 86, 1934, 1174" BrowserType="Edge" IconBase64="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" InformativeScreenshot="aea593032b24eadc11b4f5d7c8b93b00.jpg" Selector="[record.MainWindowSelector]" Title="AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" Url="[record.MainURL]" />
+              <uix:TargetApp Area="33, 86, 1934, 1174" BrowserType="Edge" IconBase64="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" InformativeScreenshot="aea593032b24eadc11b4f5d7c8b93b00.jpg" Selector="[GlobalVariablesNamespace.GlobalVariables.record.MainWindowSelector]" Title="AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" Url="[GlobalVariablesNamespace.GlobalVariables.record.MainURL]" />
             </uix:NApplicationCard.TargetApp>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1536,7 +1535,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <If sap2010:Annotation.AnnotationText="Post-process" Condition="[record.PostProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="760,56" sap2010:WorkflowViewState.IdRef="If_3">
+          <If sap2010:Annotation.AnnotationText="Post-process" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PostProcess &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="772,56" sap2010:WorkflowViewState.IdRef="If_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1551,8 +1550,8 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running post-process (&quot; + record.PostProcess.ToString + &quot;)&quot;]" />
-                <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="InvokeProcess_2" ProcessName="[record.PostProcess.ToString]" UsePackage="False">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Running post-process (&quot; + GlobalVariablesNamespace.GlobalVariables.record.PostProcess.ToString + &quot;)&quot;]" />
+                <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="InvokeProcess_2" ProcessName="[GlobalVariablesNamespace.GlobalVariables.record.PostProcess.ToString]" UsePackage="False">
                   <ui:InvokeProcess.Arguments>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:InvokeProcess.Arguments>
@@ -1566,7 +1565,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="826,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="838,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1584,7 +1583,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,141" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
-              <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="410,643" sap2010:WorkflowViewState.IdRef="If_9">
+              <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="410,643" sap2010:WorkflowViewState.IdRef="If_9">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1599,11 +1598,11 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Push Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[record.PushoverKey.APIKey]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[record.PushoverKey.UserKey]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_message">[record.LastValue + " &gt; " + "ERROR"]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_title">[record.Name + " (" + record.Site + ")"]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_url">[record.MainURL]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_message">[GlobalVariablesNamespace.GlobalVariables.record.LastValue + " &gt; " + "ERROR"]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
                         <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
                         <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
                       </ui:InvokeWorkflowFile.Arguments>
