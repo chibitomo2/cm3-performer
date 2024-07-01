@@ -57,55 +57,6 @@
     },
     "fileInfoCollection": [
       {
-        "editingStatus": "InProgress",
-        "testCaseId": "44428d28-3fe9-41ee-b061-ecf4301405e5",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\GetTransactionDataTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "8cb67dda-84ec-4f1e-a58f-f267cc68e713",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\InitAllApplicationsTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "c5b3732c-4d8d-40cc-8b00-7e61ca278301",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\InitAllSettingsTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "73f01841-e8aa-4845-911b-eeee835e2b7b",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\MainTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "cc01dcdc-ff3e-43f8-bdd0-be338f135b55",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\ProcessTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "5dda22f4-adcc-460c-8545-29a8f1835535",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "d9c7eae9-c4fb-4c31-9dc9-d56d01404505",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "Framework\\CM3\\Tests\\CM3_TestCase.xaml"
-      },
-      {
         "editingStatus": "Publishable",
         "testCaseId": "a247813e-8047-4a07-bfde-4a5409c8e310",
         "testCaseType": "TestCase",

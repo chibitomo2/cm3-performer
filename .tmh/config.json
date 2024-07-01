@@ -1,3 +1,9 @@
 {
-  "issueKeyTestcaseValues": {}
+  "issueKeyTestcaseValues": {},
+  "testManagerBasePath": "https://cloud.uipath.com/darrencheng/Production/testmanager_",
+  "defaultProject": {
+    "id": "f0c15482-d63a-0000-c98e-0b46fbb7e084",
+    "name": "Change Monitor",
+    "key": "CM3"
+  }
 }

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CM3Flow" this:CM3Flow.storage_bucket="ChecksStorage" this:CM3Flow.bc4_working_dir="C:\cm3" this:CM3Flow.bc4_left_filename="old.txt" this:CM3Flow.bc4_filepath="C:\Program Files\Beyond Compare 4\BCompare.exe" this:CM3Flow.bc4_right_filename="new.txt" this:CM3Flow.bc4_script_filename="script.txt" this:CM3Flow.bc4_output_filename="report.html" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c="clr-namespace:Change_Monitor_3_Performer;assembly=DataService.Change_Monitor_3_Performer" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CA8F03D417B_v2_sub_chat_sub_completion_Create.Bundle;assembly=CA8F03D417B_v2_sub_c.5QpAW1BeTZQ1oy51n1Pch2P1" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CM3Flow" this:CM3Flow.storage_bucket="ChecksStorage" this:CM3Flow.bc4_working_dir="C:\cm3" this:CM3Flow.bc4_left_filename="old.txt" this:CM3Flow.bc4_filepath="C:\Program Files\Beyond Compare 4\BCompare.exe" this:CM3Flow.bc4_right_filename="new.txt" this:CM3Flow.bc4_script_filename="script.txt" this:CM3Flow.bc4_output_filename="report.html" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c="clr-namespace:Change_Monitor_3_Performer;assembly=DataService.Change_Monitor_3_Performer" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CA8F03D417B_v2_sub_chat_sub_completion_Create.Bundle;assembly=CA8F03D417B_v2_sub_c.5QpAW1BeTZQ1oy51n1Pch2P1" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:utam="clr-namespace:UiPath.Testing.Activities.Mocks;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="id" Type="InArgument(x:String)" />
     <x:Property Name="storage_bucket" Type="InArgument(x:String)" />
@@ -8,6 +8,9 @@
     <x:Property Name="bc4_right_filename" Type="InArgument(x:String)" />
     <x:Property Name="bc4_script_filename" Type="InArgument(x:String)" />
     <x:Property Name="bc4_output_filename" Type="InArgument(x:String)" />
+    <x:Property Name="pushover_message_output" Type="OutArgument(x:String)" />
+    <x:Property Name="pushover_title_output" Type="OutArgument(x:String)" />
+    <x:Property Name="pushover_url_output" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -66,6 +69,7 @@
       <x:String>UiPath.IntegrationService.Activities.SWEntities.CA8F03D417B_v2_sub_chat_sub_completion_Create.Bundle</x:String>
       <x:String>UiPath.IntegrationService.Activities.SWEntities.CA8F03D417B_v2_sub_chat_sub_completion_Create.Bundle</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Testing.Activities.Mocks</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -1061,24 +1065,58 @@
                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for fullpage checkss" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="354,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
-                                                                                  <ui:InvokeWorkflowFile.Arguments>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_message">[llm_output.text]</InArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
-                                                                                    <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
-                                                                                    <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
-                                                                                  </ui:InvokeWorkflowFile.Arguments>
-                                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                                    </scg:Dictionary>
-                                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                                </ui:InvokeWorkflowFile>
+                                                                                <utam:MockActivity DisplayName="Mock Send Notification" MockedActivityIdRef="InvokeWorkflowFile_5">
+                                                                                  <utam:MockActivity.MockedActivity>
+                                                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for fullpage checkss" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="354,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
+                                                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
+                                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
+                                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_message">[llm_output.text]</InArgument>
+                                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
+                                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
+                                                                                        <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
+                                                                                        <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
+                                                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                        </scg:Dictionary>
+                                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                                    </ui:InvokeWorkflowFile>
+                                                                                  </utam:MockActivity.MockedActivity>
+                                                                                  <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="">
+                                                                                    <ui:MultipleAssign.AssignOperations>
+                                                                                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                                                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                                                                          <ui:AssignOperation.To>
+                                                                                            <OutArgument x:TypeArguments="x:String">[pushover_message_output]</OutArgument>
+                                                                                          </ui:AssignOperation.To>
+                                                                                          <ui:AssignOperation.Value>
+                                                                                            <InArgument x:TypeArguments="x:String">[llm_output.text]</InArgument>
+                                                                                          </ui:AssignOperation.Value>
+                                                                                        </ui:AssignOperation>
+                                                                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                                                                          <ui:AssignOperation.To>
+                                                                                            <OutArgument x:TypeArguments="x:String">[pushover_title_output]</OutArgument>
+                                                                                          </ui:AssignOperation.To>
+                                                                                          <ui:AssignOperation.Value>
+                                                                                            <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
+                                                                                          </ui:AssignOperation.Value>
+                                                                                        </ui:AssignOperation>
+                                                                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                                                                          <ui:AssignOperation.To>
+                                                                                            <OutArgument x:TypeArguments="x:String">[pushover_url_output]</OutArgument>
+                                                                                          </ui:AssignOperation.To>
+                                                                                          <ui:AssignOperation.Value>
+                                                                                            <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
+                                                                                          </ui:AssignOperation.Value>
+                                                                                        </ui:AssignOperation>
+                                                                                      </scg:List>
+                                                                                    </ui:MultipleAssign.AssignOperations>
+                                                                                  </ui:MultipleAssign>
+                                                                                </utam:MockActivity>
                                                                               </Sequence>
                                                                             </If.Then>
                                                                             <If.Else>
@@ -1100,24 +1138,58 @@
                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for non-fullpage checks" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="354,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
-                                                                            <ui:InvokeWorkflowFile.Arguments>
-                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
-                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
-                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_message">[GlobalVariablesNamespace.GlobalVariables.record.LastValue + " --&gt; " + llm_output.text]</InArgument>
-                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
-                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
-                                                                              <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
-                                                                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
-                                                                            </ui:InvokeWorkflowFile.Arguments>
-                                                                            <sap:WorkflowViewStateService.ViewState>
-                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                              </scg:Dictionary>
-                                                                            </sap:WorkflowViewStateService.ViewState>
-                                                                          </ui:InvokeWorkflowFile>
+                                                                          <utam:MockActivity DisplayName="Mock Send Notification" MockedActivityIdRef="InvokeWorkflowFile_4">
+                                                                            <utam:MockActivity.MockedActivity>
+                                                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for non-fullpage checks" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="354,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
+                                                                                <ui:InvokeWorkflowFile.Arguments>
+                                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
+                                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
+                                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_message">[GlobalVariablesNamespace.GlobalVariables.record.LastValue + " --&gt; " + llm_output.text]</InArgument>
+                                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
+                                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
+                                                                                  <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
+                                                                                  <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
+                                                                                </ui:InvokeWorkflowFile.Arguments>
+                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                  </scg:Dictionary>
+                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                              </ui:InvokeWorkflowFile>
+                                                                            </utam:MockActivity.MockedActivity>
+                                                                            <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="">
+                                                                              <ui:MultipleAssign.AssignOperations>
+                                                                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                                                                    <ui:AssignOperation.To>
+                                                                                      <OutArgument x:TypeArguments="x:String">[pushover_message_output]</OutArgument>
+                                                                                    </ui:AssignOperation.To>
+                                                                                    <ui:AssignOperation.Value>
+                                                                                      <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.LastValue + " --&gt; " + llm_output.text]</InArgument>
+                                                                                    </ui:AssignOperation.Value>
+                                                                                  </ui:AssignOperation>
+                                                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                                                                    <ui:AssignOperation.To>
+                                                                                      <OutArgument x:TypeArguments="x:String">[pushover_title_output]</OutArgument>
+                                                                                    </ui:AssignOperation.To>
+                                                                                    <ui:AssignOperation.Value>
+                                                                                      <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
+                                                                                    </ui:AssignOperation.Value>
+                                                                                  </ui:AssignOperation>
+                                                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                                                                    <ui:AssignOperation.To>
+                                                                                      <OutArgument x:TypeArguments="x:String">[pushover_url_output]</OutArgument>
+                                                                                    </ui:AssignOperation.To>
+                                                                                    <ui:AssignOperation.Value>
+                                                                                      <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
+                                                                                    </ui:AssignOperation.Value>
+                                                                                  </ui:AssignOperation>
+                                                                                </scg:List>
+                                                                              </ui:MultipleAssign.AssignOperations>
+                                                                            </ui:MultipleAssign>
+                                                                          </utam:MockActivity>
                                                                         </Sequence>
                                                                       </If.Else>
                                                                     </If>
