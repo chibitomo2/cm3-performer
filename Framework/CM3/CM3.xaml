@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1757,9678</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1757,6105</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CM3_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -145,7 +145,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="922,9613" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CM3" sap:VirtualizedContainerService.HintSize="922,6040" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="c:ChangeMonitorChecks" sap2010:Annotation.AnnotationText="The current record (check) from Data Service loaded into the process" Name="record" />
       <Variable x:TypeArguments="uiascb:v2_sub_chat_sub_completion_Create" sap2010:Annotation.AnnotationText="Output variable of Generate Chat Completion activities" Name="llm_output" />
@@ -211,9 +211,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="860,9011" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="860,5438" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="822,8783" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="822,5210" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -248,19 +248,19 @@
               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
             </If.Else>
           </If>
-          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="760,8480" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="760,4907" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,8282" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,4709" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope sap2010:Annotation.AnnotationText="Copy page text into clipboard, then into a variable" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="664,1374" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="30" RetryInterval="00:00:01">
+                  <ui:RetryScope sap2010:Annotation.AnnotationText="Copy page text into clipboard, then into a variable" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="664,67" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="30" RetryInterval="00:00:01">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,1168" sap2010:WorkflowViewState.IdRef="Sequence_13">
@@ -345,13 +345,13 @@
                     </ui:RetryScope.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:RetryScope>
-                  <If sap2010:Annotation.AnnotationText="If the check is a full page diff check..." Condition="[cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="664,4507" sap2010:WorkflowViewState.IdRef="If_5">
+                  <If sap2010:Annotation.AnnotationText="If the check is a full page diff check..." Condition="[cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="664,4087" sap2010:WorkflowViewState.IdRef="If_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -360,7 +360,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="630,3131" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <Sequence sap:VirtualizedContainerService.HintSize="630,2711" sap2010:WorkflowViewState.IdRef="Sequence_14">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -466,10 +466,10 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ForEach>
-                        <If sap2010:Annotation.AnnotationText="Run custom or template prompt against the diff results" Condition="[record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="588,904" sap2010:WorkflowViewState.IdRef="If_6">
+                        <If sap2010:Annotation.AnnotationText="Run custom or template prompt against the diff results" Condition="[record.PromptTemplate is Nothing]" sap:VirtualizedContainerService.HintSize="588,82" sap2010:WorkflowViewState.IdRef="If_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                             </scg:Dictionary>
@@ -667,7 +667,7 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <If sap2010:Annotation.AnnotationText="If old and new text are different:&#xA;- Archive copy of the old text&#xA;- Save the new text as the old text for the next run&#xA;- Download both files and create a diff report with BC4&#xA;- Upload BC4 diff to record" Condition="[old_text &lt;&gt; new_text]" sap:VirtualizedContainerService.HintSize="588,1789" sap2010:WorkflowViewState.IdRef="If_7">
+                        <If sap2010:Annotation.AnnotationText="If old and new text are different:&#xA;- Archive copy of the old text&#xA;- Save the new text as the old text for the next run&#xA;- Download both files and create a diff report with BC4&#xA;- Upload BC4 diff to record&#xD;&#xA;- Upload BC4 diff to storage bucket" Condition="[old_text &lt;&gt; new_text]" sap:VirtualizedContainerService.HintSize="588,2191" sap2010:WorkflowViewState.IdRef="If_7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -676,13 +676,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="554,1520" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                            <Sequence sap:VirtualizedContainerService.HintSize="554,1907" sap2010:WorkflowViewState.IdRef="Sequence_23">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save archive copy" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="512,217" sap2010:WorkflowViewState.IdRef="WriteStorageText_3" Path="[record.Id.ToString+&quot;--&quot;+now.ToString(&quot;yyyy-MM-dd--HH-mm-ss&quot;)]" StorageBucketName="[storage_bucket]" Text="[old_text]">
+                              <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Save archive copy" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="512,217" sap2010:WorkflowViewState.IdRef="WriteStorageText_3" Path="[now.ToString(&quot;yyyy-MM-dd--HH-mm-ss&quot;)+&quot;--&quot;+record.Id.ToString]" StorageBucketName="[storage_bucket]" Text="[old_text]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -700,18 +700,18 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ucas:WriteStorageText>
-                              <Sequence sap2010:Annotation.AnnotationText="Write old and new text into BC4 working directory" DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="512,918" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                              <Sequence sap2010:Annotation.AnnotationText="Write old and new text into BC4 working directory" DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="512,1305" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Write old text as left file" DisplayName="Write Text File" FileName="[bc4_working_dir+&quot;\&quot;+bc4_left_filename]" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[old_text]">
+                                <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Write old text as left file" DisplayName="Write Text File" FileName="[bc4_working_dir+&quot;\&quot;+bc4_left_filename]" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[old_text]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -746,7 +746,7 @@
                                 <ui:RetryScope sap2010:Annotation.AnnotationText="Upload diff report to record. BC4 may not be finished with the file immediately, so retry upload for 20s" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="450,97" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="20" RetryInterval="00:00:01">
                                   <ui:RetryScope.ActivityBody>
                                     <ActivityAction>
-                                      <uda:UploadFileToRecordField x:TypeArguments="c:ChangeMonitorChecks" FilePath="{x:Null}" OutputEntity="{x:Null}" sap2010:Annotation.AnnotationText="Upload diff file to record" ContinueOnError="False" DisplayName="Upload File to Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" Field="DiffReport" FileResource="[LocalResource.FromPath(bc4_working_dir+&quot;\&quot;+bc4_output_filename)]" sap:VirtualizedContainerService.HintSize="334,273" sap2010:WorkflowViewState.IdRef="UploadFileToRecordField`1_4" RecordId="[record_id]" TimeoutInMs="30000">
+                                      <uda:UploadFileToRecordField x:TypeArguments="c:ChangeMonitorChecks" FilePath="{x:Null}" OutputEntity="{x:Null}" sap2010:Annotation.AnnotationText="Upload diff file to record" ContinueOnError="False" DisplayName="Upload File to Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" Field="DiffReport" FileResource="[LocalResource.FromPath(bc4_working_dir+&quot;\&quot;+bc4_output_filename)]" sap:VirtualizedContainerService.HintSize="334,275" sap2010:WorkflowViewState.IdRef="UploadFileToRecordField`1_4" RecordId="[record_id]" TimeoutInMs="30000">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -768,6 +768,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:RetryScope>
+                                <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="[now.ToString(&quot;yyyy-MM-dd--HH-mm-ss&quot;)+&quot;--&quot;+record.Id.ToString+&quot;--&quot;+bc4_output_filename]" DisplayName="Upload Storage File" sap:VirtualizedContainerService.HintSize="450,239" sap2010:WorkflowViewState.IdRef="UploadStorageFile_2" Path="[bc4_working_dir+&quot;\&quot;+bc4_output_filename]" StorageBucketName="[storage_bucket]" />
                                 <Sequence sap2010:Annotation.AnnotationText="Clean up working directory" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1291,11 +1292,11 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <If sap2010:Annotation.AnnotationText="If the last value is the same as the new value:&#xA;- Update the last checked date&#xA;Otherwise:&#xA;- update the last value with the current value, and send a push notification" Condition="[record.LastValue = llm_output.text]" sap:VirtualizedContainerService.HintSize="664,2003" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If sap2010:Annotation.AnnotationText="If the last value is the same as the new value:&#xA;- Update the last checked date&#xA;Otherwise:&#xA;- update the last value with the current value, and send a push notification" Condition="[record.LastValue = llm_output.text]" sap:VirtualizedContainerService.HintSize="664,157" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
