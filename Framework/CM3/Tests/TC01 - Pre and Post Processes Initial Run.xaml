@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TC01___Pre_and_Post_Processes_Initial_Run" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="725,1988" sap2010:WorkflowViewState.IdRef="TC01___Pre_and_Post_Processes_Initial_Run_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Change_Monitor_3_Performer;assembly=DataService.Change_Monitor_3_Performer" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TC01___Pre_and_Post_Processes_Initial_Run" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="725,2092" sap2010:WorkflowViewState.IdRef="TC01___Pre_and_Post_Processes_Initial_Run_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Change_Monitor_3_Performer;assembly=DataService.Change_Monitor_3_Performer" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -94,7 +94,7 @@
       <AssemblyReference>UiPath.Testing</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TC01___Pre_and_Post_Processes_Initial_Run" sap:VirtualizedContainerService.HintSize="558,1923" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TC01___Pre_and_Post_Processes_Initial_Run" sap:VirtualizedContainerService.HintSize="558,2027" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="id" />
       <Variable x:TypeArguments="x:String" Name="pushover_message_output" />
@@ -106,7 +106,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="496,962" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="496,1066" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -125,11 +125,11 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Set up the check parameters" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="434,696" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .FullPageCheck = false,  .LastValue = &quot;&quot;,  .MainURL = &quot;https://waste-services.sutton.gov.uk/waste*&quot;,  .MainWindowSelector = &quot;&lt;html app='msedge.exe' /&gt;&quot;,  .Name = &quot;TC01 - Pre and Post Processes Initial Run&quot;,  .Prompt = &quot;Give me the address on the page. Do not add any other detail or description.&quot;,  .PromptTemplate = new Prompts() With { .Id = Nothing },  .Site = &quot;Sutton Council&quot;,  .UseVision = false, .Id = Guid.Parse(id) }]" RecordId="[Guid.Parse(id)]" TimeoutInMs="30000">
+      <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Set up the check parameters" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="434,800" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .FullPageCheck = false,  .LastValue = &quot;&quot;,  .MainURL = &quot;https://waste-services.sutton.gov.uk/waste*&quot;,  .MainWindowSelector = &quot;&lt;html app='msedge.exe' /&gt;&quot;,  .Name = &quot;TC01 - Pre and Post Processes Initial Run&quot;,  .PostProcess = &quot;post-95e3a02b-ae2c-ef11-86d2-000d3ab7cabd&quot;,  .PreProcess = &quot;pre-95e3a02b-ae2c-ef11-86d2-000d3ab7cabd&quot;,  .Prompt = &quot;Give me the address on the page. Do not add any other detail or description.&quot;,  .PromptTemplate = new Prompts() With { .Id = Nothing },  .Site = &quot;Sutton Council&quot;,  .UseVision = false, .Id = Guid.Parse(id) }]" RecordId="[Guid.Parse(id)]" TimeoutInMs="30000">
         <uda:UpdateEntityRecord.State>
           <udam:RecordState RequiredFieldCount="2">
             <udam:RecordState.SelectedFields>
-              <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="9">
+              <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="11">
                 <udam:DynamicEntityField Id="8508366a-f12c-ef11-86d2-000d3ab38381" Name="FullPageCheck">
                   <udam:DynamicEntityField.ArgumentValue>
                     <InArgument x:TypeArguments="x:Boolean">False</InArgument>
@@ -155,6 +155,16 @@
                 <udam:DynamicEntityField Id="2386ada5-14c1-ee11-85f9-0022489f653e" Name="Name">
                   <udam:DynamicEntityField.ArgumentValue>
                     <InArgument x:TypeArguments="x:String">TC01 - Pre and Post Processes Initial Run</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="63d69054-2e2c-ef11-86d2-000d3ab405d7" Name="PostProcess">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:String">post-95e3a02b-ae2c-ef11-86d2-000d3ab7cabd</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="62d69054-2e2c-ef11-86d2-000d3ab405d7" Name="PreProcess">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:String">pre-95e3a02b-ae2c-ef11-86d2-000d3ab7cabd</InArgument>
                   </udam:DynamicEntityField.ArgumentValue>
                 </udam:DynamicEntityField>
                 <udam:DynamicEntityField Id="ffe798d6-831e-ef11-86d2-000d3ab405d7" Name="Prompt">
