@@ -145,7 +145,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" sap2010:Annotation.AnnotationText="Verify screenshot file is present in local folder" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,297" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+    <uta:VerifyControlAttribute KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Screenshot saved to check" sap2010:Annotation.AnnotationText="Verify screenshot file is present in local folder" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,297" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
       <uta:VerifyControlAttribute.ActivityToTest>
         <ActivityAction>
           <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[local_storage_folderpath+&quot;screenshot.png&quot;]">
