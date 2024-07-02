@@ -1,8 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CM3_Old_vs_New_Diff" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ta="clr-namespace:TextComparison.Activities;assembly=TextComparison.Activities" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CM3_Old_vs_New_Diff" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ta="clr-namespace:TextComparison.Activities;assembly=TextComparison.Activities" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="storage_bucket" Type="InArgument(x:String)" />
+    <x:Property Name="new_text" Type="InArgument(x:String)" />
+    <x:Property Name="old_text" Type="OutArgument(x:String)" />
+    <x:Property Name="comparison_result_to_string" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1193,1682</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1752,1682</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -126,6 +129,9 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Sequence DisplayName="Perform Old vs New Diff" sap:VirtualizedContainerService.HintSize="592,1529" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sc:IEnumerable" Name="comparison_result" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,7 +146,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <ucas:ReadStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Try to get the old value from storage" DisplayName="Read Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" Result="[old_text]" StorageBucketName="[storage_bucket]">
+          <ucas:ReadStorageText sap2010:Annotation.AnnotationText="Try to get the old value from storage" ContinueOnError="{x:Null}" DisplayName="Read Storage Text" Encoding="{x:Null}" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" Result="[old_text]" StorageBucketName="[storage_bucket]" TimeoutMS="{x:Null}">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -170,7 +176,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ucas:WriteStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Create it for the first time and set it to the current text so no changes are identified during comparison" DisplayName="Write Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="354,260" sap2010:WorkflowViewState.IdRef="WriteStorageText_1" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" StorageBucketName="[storage_bucket]" Text="[new_text]">
+                <ucas:WriteStorageText sap2010:Annotation.AnnotationText="Create it for the first time and set it to the current text so no changes are identified during comparison" ContinueOnError="{x:Null}" DisplayName="Write Storage Text" Encoding="{x:Null}" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="354,260" sap2010:WorkflowViewState.IdRef="WriteStorageText_1" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" StorageBucketName="[storage_bucket]" Text="[new_text]" TimeoutMS="{x:Null}">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -179,7 +185,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ucas:WriteStorageText>
-                <ucas:ReadStorageText TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Try to get the old value from storage" DisplayName="Read Storage Text" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="354,187" sap2010:WorkflowViewState.IdRef="ReadStorageText_2" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" Result="[old_text]" StorageBucketName="[storage_bucket]">
+                <ucas:ReadStorageText sap2010:Annotation.AnnotationText="Try to get the old value from storage" ContinueOnError="{x:Null}" DisplayName="Read Storage Text" Encoding="{x:Null}" FolderPath="Change Monitor" sap:VirtualizedContainerService.HintSize="354,187" sap2010:WorkflowViewState.IdRef="ReadStorageText_2" Path="[GlobalVariablesNamespace.GlobalVariables.record.Id.ToString]" Result="[old_text]" StorageBucketName="[storage_bucket]" TimeoutMS="{x:Null}">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -191,7 +197,7 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ta:CompareText ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Do a diff between old and current version of the text" sap:VirtualizedContainerService.HintSize="530,196" sap2010:WorkflowViewState.IdRef="CompareText_1" Result="[comparison_result]" Text1="[old_text]" Text2="[new_text]">
+      <ta:CompareText sap2010:Annotation.AnnotationText="Do a diff between old and current version of the text" ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="530,196" sap2010:WorkflowViewState.IdRef="CompareText_1" Result="[comparison_result]" Text1="[old_text]" Text2="[new_text]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -200,7 +206,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ta:CompareText>
-      <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Convert the diff report to a string for the prompt" DisplayName="For Each currentItem" sap:VirtualizedContainerService.HintSize="530,361" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[comparison_result]">
+      <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" sap2010:Annotation.AnnotationText="Convert the diff report to a string for the prompt" CurrentIndex="{x:Null}" DisplayName="For Each currentItem" sap:VirtualizedContainerService.HintSize="530,361" sap2010:WorkflowViewState.IdRef="ForEach`1_1" MaxIterations="{x:Null}" Values="[comparison_result]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
             <ActivityAction.Argument>
