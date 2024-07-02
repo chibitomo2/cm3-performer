@@ -1,14 +1,15 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="CM3_Flow" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Change_Monitor_3_Performer;assembly=DataService.Change_Monitor_3_Performer" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:utam="clr-namespace:UiPath.Testing.Activities.Mocks;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="id" Type="InArgument(x:String)" />
-    <x:Property Name="pushover_message_output" Type="OutArgument(x:String)" />
-    <x:Property Name="pushover_title_output" Type="OutArgument(x:String)" />
-    <x:Property Name="pushover_url_output" Type="OutArgument(x:String)" />
+    <x:Property Name="mock_pushover_message_output" Type="OutArgument(x:String)" />
+    <x:Property Name="mock_pushover_title_output" Type="OutArgument(x:String)" />
+    <x:Property Name="mock_pushover_url_output" Type="OutArgument(x:String)" />
+    <x:Property Name="mock_new_text" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1062,684</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1752,824</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CM3_Flow_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,17 +103,17 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CM3_Flow" sap:VirtualizedContainerService.HintSize="848,593" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CM3_Flow" sap:VirtualizedContainerService.HintSize="853,585" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="786,505" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="791,497" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <utam:MockActivity DisplayName="Mock CM3 Flowchart - Invoke Workflow File (Framework\CM3\CM3 Flowchart.xaml)" sap:VirtualizedContainerService.HintSize="748,249" sap2010:WorkflowViewState.IdRef="MockActivity_1" MockedActivityIdRef="InvokeWorkflowFile_1">
+        <utam:MockActivity DisplayName="Mock CM3 Flowchart - Invoke Workflow File (Framework\CM3\CM3 Flowchart.xaml)" sap:VirtualizedContainerService.HintSize="753,246" sap2010:WorkflowViewState.IdRef="MockActivity_1" MockedActivityIdRef="InvokeWorkflowFile_1">
           <utam:MockActivity.MockedActivity>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flowchart - Invoke Workflow File (Framework\CM3\CM3 Flowchart.xaml)" sap:VirtualizedContainerService.HintSize="334,175" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\CM3 Flowchart.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flowchart - Invoke Workflow File (Framework\CM3\CM3 Flowchart.xaml)" sap:VirtualizedContainerService.HintSize="337,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\CM3 Flowchart.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="id">[id]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="storage_bucket" />
@@ -125,7 +126,7 @@
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </utam:MockActivity.MockedActivity>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flowchart_mock - Invoke Workflow File (Mocks\Framework\CM3\CM3 Flowchart_mock.xaml)" sap:VirtualizedContainerService.HintSize="336,175" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Mocks\Framework\CM3\CM3 Flowchart_mock.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flowchart_mock - Invoke Workflow File (Mocks\Framework\CM3\CM3 Flowchart_mock.xaml)" sap:VirtualizedContainerService.HintSize="338,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Mocks\Framework\CM3\CM3 Flowchart_mock.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="id">[id]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="storage_bucket" />
@@ -135,15 +136,16 @@
               <InArgument x:TypeArguments="x:String" x:Key="bc4_right_filename" />
               <InArgument x:TypeArguments="x:String" x:Key="bc4_script_filename" />
               <InArgument x:TypeArguments="x:String" x:Key="bc4_output_filename" />
-              <OutArgument x:TypeArguments="x:String" x:Key="pushover_message_output">[pushover_message_output]</OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="pushover_title_output">[pushover_title_output]</OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="pushover_url_output">[pushover_url_output]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_message_output">[mock_pushover_message_output]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_title_output">[mock_pushover_title_output]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_url_output">[mock_pushover_url_output]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="mock_new_text">[mock_new_text]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </utam:MockActivity>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="752,23" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="757,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -154,14 +156,14 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="512,598" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence sap:VirtualizedContainerService.HintSize="512,596" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
               <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="450,256" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">

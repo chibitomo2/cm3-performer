@@ -9,7 +9,7 @@
     "UiPath.IntegrationService.Activities": "[1.5.0]",
     "UiPath.System.Activities": "[24.10.3]",
     "UiPath.Testing.Activities": "[23.10.1]",
-    "UiPath.UIAutomation.Activities": "[23.10.11]",
+    "UiPath.UIAutomation.Activities": "[23.10.12]",
     "UiPath.WebAPI.Activities": "[1.20.1]",
     "UiPathTeam.TextComparison.Activities": "[2.1.0]"
   },
@@ -62,6 +62,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Framework\\CM3\\Tests\\TC01 - Pre and Post Processes Initial Run.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d64cfde3-2043-4008-ad54-8a5309fa6725",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\CM3\\Tests\\TC02 - FPC Initial Run + Prompt Template.xaml"
       }
     ],
     "saveToCloud": false
