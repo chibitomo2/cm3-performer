@@ -102,7 +102,7 @@
       <AssemblyReference>UiPath.Testing</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TC01___Pre_and_Post_Processes_Initial_Run" sap:VirtualizedContainerService.HintSize="558,1864" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TC01___Pre_and_Post_Processes_Initial_Run" sap:VirtualizedContainerService.HintSize="512,1864" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="id" />
       <Variable x:TypeArguments="x:String" Name="mock_pushover_message_output" />
@@ -114,7 +114,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="496,908" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="450,908" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,7 +195,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </uda:UpdateEntityRecord>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="450,315" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -207,10 +207,12 @@
           <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_message_output">[mock_pushover_message_output]</OutArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_title_output">[mock_pushover_title_output]</OutArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_url_output">[mock_pushover_url_output]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="mock_new_text" />
+          <OutArgument x:TypeArguments="x:String" x:Key="mock_old_text" />
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="496,553" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="450,553" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
       </Sequence.Variables>

@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1752,2143</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1752,2642</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TC02___FPC___Prompt_Template_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,7 +111,7 @@
       <AssemblyReference>DataService.CM3_Testing_Library</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TC02___FPC___Prompt_Template" sap:VirtualizedContainerService.HintSize="624,2078" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TC02___FPC___Prompt_Template" sap:VirtualizedContainerService.HintSize="574,2577" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:Guid" Name="record_id" />
       <Variable x:TypeArguments="x:String" Name="mock_new_text" />
@@ -125,7 +125,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="562,636" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="512,1112" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -228,85 +228,39 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uda:UpdateEntityRecord>
-      <TryCatch sap2010:Annotation.AnnotationText="Remove attachments from &quot;screenshot&quot; field" DisplayName="Delete Attachment" sap:VirtualizedContainerService.HintSize="434,99" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Remove Attachment From Field - Invoke Workflow File (Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="s:Guid" x:Key="id">[record_id]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="field_name">screenshot</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Remove attachment from DiffReport field" DisplayName="Remove Attachment From Field - Invoke Workflow File (Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml)" sap:VirtualizedContainerService.HintSize="434,235" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="s:Guid" x:Key="id">[record_id]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="field_name">DiffReport</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Reset Temp folder for this test execution" DisplayName="Reset Temporary Storage Area" sap:VirtualizedContainerService.HintSize="434,226" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="folder_path">[local_storage_folder]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="416,178" sap2010:WorkflowViewState.IdRef="Sequence_9">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <uda:DeleteFileFromRecordField x:TypeArguments="c:ChangeMonitorChecks" OutputEntity="{x:Null}" sap2010:Annotation.AnnotationText="Clear &quot;screenshot&quot; field of attachments" ContinueOnError="False" DisplayName="Delete File from Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" Field="Screenshot" sap:VirtualizedContainerService.HintSize="354,90" sap2010:WorkflowViewState.IdRef="DeleteFileFromRecordField`1_1" RecordId="[record_id]" TimeoutInMs="30000">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </uda:DeleteFileFromRecordField>
-          </Sequence>
-        </TryCatch.Try>
-        <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="420,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ActivityAction x:TypeArguments="s:Exception">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-              </ActivityAction.Argument>
-            </ActivityAction>
-          </Catch>
-        </TryCatch.Catches>
-      </TryCatch>
-      <TryCatch sap2010:Annotation.AnnotationText="Remove attachments from &quot;diff report&quot; field" DisplayName="Delete Attachment" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <TryCatch.Try>
-          <uda:DeleteFileFromRecordField x:TypeArguments="c:ChangeMonitorChecks" OutputEntity="{x:Null}" sap2010:Annotation.AnnotationText="Clear &quot;diff report&quot; field of attachments" ContinueOnError="False" DisplayName="Delete File from Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" Field="DiffReport" sap:VirtualizedContainerService.HintSize="200,67" sap2010:WorkflowViewState.IdRef="DeleteFileFromRecordField`1_3" RecordId="[record_id]" TimeoutInMs="30000">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </uda:DeleteFileFromRecordField>
-        </TryCatch.Try>
-        <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ActivityAction x:TypeArguments="s:Exception">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-              </ActivityAction.Argument>
-            </ActivityAction>
-          </Catch>
-        </TryCatch.Catches>
-      </TryCatch>
+      </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="562,315" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="512,315" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -319,10 +273,11 @@
           <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_title_output">[mock_pushover_title_output]</OutArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_url_output">[mock_pushover_url_output]</OutArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="mock_new_text">[mock_new_text]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="mock_old_text" />
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="562,1039" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="512,1062" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
         <Variable x:TypeArguments="scg:IEnumerable(ucas:StorageFileInfo)" Name="storage_files_list" />
@@ -333,7 +288,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" sap2010:Annotation.AnnotationText="Get record for this test case" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="500,88" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_2" OutputEntity="[record]" RecordId="[record_id]" TimeoutInMs="30000">
+      <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" sap2010:Annotation.AnnotationText="Get record for this test case" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_2" OutputEntity="[record]" RecordId="[record_id]" TimeoutInMs="30000">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -342,7 +297,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uda:GetEntityRecordById>
-      <Sequence sap2010:Annotation.AnnotationText="Verify that the initial storage bucket file for the ID has been created and its contents are the current text of the web page" DisplayName="Verify Storage Bucket File" sap:VirtualizedContainerService.HintSize="500,99" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <Sequence sap2010:Annotation.AnnotationText="Verify that &quot;Last Value&quot; was set correctly" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -350,30 +305,20 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ucas:DownloadStorageFile TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Download storage bucket file that was created on first run of the check" Destination="[local_storage_folder+id]" DisplayName="Download Storage File" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_2" Path="[id]" StorageBucketName="[storage_bucket]">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Testing if record fields were set correctly&quot;]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-        </ucas:DownloadStorageFile>
-        <ui:ReadTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Read the downloaded file into a variable" Content="[saved_text]" DisplayName="Read Text File" FileName="[local_storage_folder+id]" sap:VirtualizedContainerService.HintSize="388,99" sap2010:WorkflowViewState.IdRef="ReadTextFile_2">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </ui:ReadTextFile>
-        <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" sap2010:Annotation.AnnotationText="Verify the contents of the storage bucket file is the same the text copied from the website" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="388,129" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_5" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        </ui:LogMessage>
+        <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" sap2010:Annotation.AnnotationText="Verify Last Value = &quot;No changes&quot;" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_6" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
           <uta:VerifyExpressionWithOperator.FirstExpression>
-            <InArgument x:TypeArguments="x:String">[saved_text]</InArgument>
+            <InArgument x:TypeArguments="x:String">[record.LastValue]</InArgument>
           </uta:VerifyExpressionWithOperator.FirstExpression>
           <uta:VerifyExpressionWithOperator.SecondExpression>
-            <InArgument x:TypeArguments="x:String">[mock_new_text]</InArgument>
+            <InArgument x:TypeArguments="x:String">["No changes"]</InArgument>
           </uta:VerifyExpressionWithOperator.SecondExpression>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -383,17 +328,21 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </uta:VerifyExpressionWithOperator>
-        <ucas:DeleteStorageFile TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Clean up storage bucket" DisplayName="Delete Storage File" sap:VirtualizedContainerService.HintSize="388,79" sap2010:WorkflowViewState.IdRef="DeleteStorageFile_2" Path="[id]" StorageBucketName="[storage_bucket]">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </ucas:DeleteStorageFile>
       </Sequence>
-      <Sequence sap2010:Annotation.AnnotationText="Verify that no Pushover notification was sent, by checking that Pushover inputs are not initialized" DisplayName="Verify No Pushover Notification Was Sent" sap:VirtualizedContainerService.HintSize="500,99" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Verify that the first storage file is created and contains the current page text" DisplayName="Verify First Storage Bucket File" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="[UiPath.Core.Activities.LogEntryType.No]" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify First Storage Bucket File.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="file_name">[id]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="storage_bucket_name">[storage_bucket]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="local_storage_folderpath">[local_storage_folder]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="expected_text">[mock_new_text]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <Sequence sap2010:Annotation.AnnotationText="Verify that no Pushover notification was sent, by checking that Pushover inputs are not initialized" DisplayName="Verify No Pushover Notification Was Sent" sap:VirtualizedContainerService.HintSize="450,99" sap2010:WorkflowViewState.IdRef="Sequence_7">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -401,119 +350,36 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Testing if Pushover notification was sent&quot;]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:LogMessage>
         <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[mock_pushover_message_output is Nothing]" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
         <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[mock_pushover_title_output is Nothing]" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="VerifyExpression_2" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
         <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[mock_pushover_url_output is Nothing]" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="VerifyExpression_3" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
       </Sequence>
-      <Sequence sap2010:Annotation.AnnotationText="Verify that the &quot;screenshot&quot; field contains a screenshot" DisplayName="Verify &quot;Screenshot&quot; Was Saved" sap:VirtualizedContainerService.HintSize="500,88" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Screenshot Was Saved - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="s:Guid" x:Key="record_id">[record_id]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="local_storage_folderpath">[local_storage_folder]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Recreate Temp folder for this test execution" DisplayName="Reset Temporary Storage Area" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="folder_path">[local_storage_folder]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <TryCatch sap2010:Annotation.AnnotationText="Download screenshot to local storage" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="388,99" sap2010:WorkflowViewState.IdRef="TryCatch_3">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <TryCatch.Try>
-            <uda:DownloadFileFromRecordField x:TypeArguments="c:ChangeMonitorChecks" DownloadedFileResource="{x:Null}" ContinueOnError="False" DisplayName="Download File from Record Field" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" Field="Screenshot" FilePath="[local_storage_folder]" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="DownloadFileFromRecordField`1_1" RecordId="[record_id]" TimeoutInMs="30000">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </uda:DownloadFileFromRecordField>
-          </TryCatch.Try>
-          <TryCatch.Catches>
-            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ActivityAction x:TypeArguments="s:Exception">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                </ActivityAction.Argument>
-              </ActivityAction>
-            </Catch>
-          </TryCatch.Catches>
-        </TryCatch>
-        <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" sap2010:Annotation.AnnotationText="Verify screenshot file is present in local folder" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
-          <uta:VerifyControlAttribute.ActivityToTest>
-            <ActivityAction>
-              <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[local_storage_folder+&quot;screenshot.png&quot;]">
-                <ui:FileExistsX.Exists>
-                  <OutArgument x:TypeArguments="x:Boolean">
-                    <VariableReference x:TypeArguments="x:Boolean">
-                      <VariableReference.Variable>
-                        <Variable x:TypeArguments="x:Boolean" x:Name="__ReferenceID0" Name="_autogenerated_Exists" />
-                      </VariableReference.Variable>
-                    </VariableReference>
-                  </OutArgument>
-                </ui:FileExistsX.Exists>
-              </ui:FileExistsX>
-            </ActivityAction>
-          </uta:VerifyControlAttribute.ActivityToTest>
-          <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
-            <ActivityFunc x:TypeArguments="x:Object">
-              <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_1">
-                <uta:ArgumentsBridge.Input>
-                  <InArgument x:TypeArguments="x:Object">
-                    <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID0}" />
-                  </InArgument>
-                </uta:ArgumentsBridge.Input>
-              </uta:ArgumentsBridge>
-            </ActivityFunc>
-          </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
-          <uta:VerifyControlAttribute.Expression>
-            <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
-          </uta:VerifyControlAttribute.Expression>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </uta:VerifyControlAttribute>
-      </Sequence>
-      <Sequence DisplayName="Recreate_Temp_Folder" sap:VirtualizedContainerService.HintSize="500,554" sap2010:WorkflowViewState.IdRef="Sequence_10">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,340" sap2010:WorkflowViewState.IdRef="TryCatch_4">
-          <TryCatch.Try>
-            <ui:DeleteFolderX DisplayName="Delete Folder" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="DeleteFolderX_2" Path="[local_storage_folder]" Recursive="True" />
-          </TryCatch.Try>
-          <TryCatch.Catches>
-            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_4">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ActivityAction x:TypeArguments="s:Exception">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                </ActivityAction.Argument>
-              </ActivityAction>
-            </Catch>
-          </TryCatch.Catches>
-        </TryCatch>
-        <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="438,103" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[local_storage_folder]" />
-      </Sequence>
+      </ui:InvokeWorkflowFile>
     </Sequence>
   </Sequence>
 </Activity>

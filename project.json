@@ -64,7 +64,7 @@
         "fileName": "Framework\\CM3\\Tests\\TC01 - Pre and Post Processes Initial Run.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "d64cfde3-2043-4008-ad54-8a5309fa6725",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,

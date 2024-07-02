@@ -5,6 +5,7 @@
     <x:Property Name="mock_pushover_title_output" Type="OutArgument(x:String)" />
     <x:Property Name="mock_pushover_url_output" Type="OutArgument(x:String)" />
     <x:Property Name="mock_new_text" Type="OutArgument(x:String)" />
+    <x:Property Name="mock_old_text" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -140,6 +141,7 @@
               <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_title_output">[mock_pushover_title_output]</OutArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_url_output">[mock_pushover_url_output]</OutArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="mock_new_text">[mock_new_text]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="mock_old_text">[mock_old_text]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </utam:MockActivity>
