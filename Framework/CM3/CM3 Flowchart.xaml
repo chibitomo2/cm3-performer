@@ -412,7 +412,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[Not String.IsNullOrEmpty(record.RemoveTextBefore)]" sap:VirtualizedContainerService.HintSize="530,505" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If Condition="[Not String.IsNullOrEmpty(record.PromptTemplate.RemoveTextBefore)]" sap:VirtualizedContainerService.HintSize="530,505" sap2010:WorkflowViewState.IdRef="If_4">
                           <If.Then>
                             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_38">
                               <Sequence.Variables>
@@ -452,7 +452,7 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <If Condition="[Not String.IsNullOrEmpty(record.RemoveTextAfter)]" sap:VirtualizedContainerService.HintSize="530,505" sap2010:WorkflowViewState.IdRef="If_5">
+                        <If Condition="[Not String.IsNullOrEmpty(record.PromptTemplate.RemoveTextAfter)]" sap:VirtualizedContainerService.HintSize="530,505" sap2010:WorkflowViewState.IdRef="If_5">
                           <If.Then>
                             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_40">
                               <Sequence.Variables>
