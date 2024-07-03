@@ -69,6 +69,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Framework\\CM3\\Tests\\TC02 - FPC Initial Run + Prompt Template.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f2ad612f-86be-4139-8fcb-fb675f10d5b0",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\CM3\\Tests\\Local Test.xaml"
       }
     ],
     "saveToCloud": false
