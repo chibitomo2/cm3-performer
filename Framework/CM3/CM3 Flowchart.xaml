@@ -428,7 +428,7 @@
                                   <OutArgument x:TypeArguments="s:String[]">[split_text_array]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="s:String[]">[new_text.Split(record.RemoveTextBefore)]</InArgument>
+                                  <InArgument x:TypeArguments="s:String[]">[new_text.Split(record.PromptTemplate.RemoveTextBefore)]</InArgument>
                                 </Assign.Value>
                               </Assign>
                               <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_13">
@@ -468,7 +468,7 @@
                                   <OutArgument x:TypeArguments="s:String[]">[split_text_array]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="s:String[]">[new_text.Split(record.RemoveTextAfter)]</InArgument>
+                                  <InArgument x:TypeArguments="s:String[]">[new_text.Split(record.PromptTemplate.RemoveTextAfter)]</InArgument>
                                 </Assign.Value>
                               </Assign>
                               <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_15">
