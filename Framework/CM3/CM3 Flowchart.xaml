@@ -134,7 +134,7 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="826,390" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="826,650" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="new_text" />
       <Variable x:TypeArguments="x:String" Name="old_text" />
@@ -406,7 +406,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">920,515 920,535</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Trim Copied Text" sap:VirtualizedContainerService.HintSize="592,1089" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <Sequence DisplayName="Trim Copied Text" sap:VirtualizedContainerService.HintSize="592,1539" sap2010:WorkflowViewState.IdRef="Sequence_37">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -452,7 +452,7 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <If Condition="[Not String.IsNullOrEmpty(record.RemoveTextAfter)]" sap:VirtualizedContainerService.HintSize="530,496" sap2010:WorkflowViewState.IdRef="If_5">
+                        <If Condition="[Not String.IsNullOrEmpty(record.RemoveTextAfter)]" sap:VirtualizedContainerService.HintSize="530,505" sap2010:WorkflowViewState.IdRef="If_5">
                           <If.Then>
                             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,309" sap2010:WorkflowViewState.IdRef="Sequence_40">
                               <Sequence.Variables>
@@ -483,6 +483,28 @@
                           </If.Then>
                           <If.Else>
                             <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <If Condition="[not cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="530,441" sap2010:WorkflowViewState.IdRef="If_6">
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;Copied Text: &quot; + new_text]" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_43">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1109,15 +1131,15 @@
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:SetToClipboard>
                                                         <FlowStep.Next>
-                                                          <FlowDecision x:Name="__ReferenceID32" Condition="[GlobalVariablesNamespace.GlobalVariables.record.LastValue &lt;&gt; llm_output.text]" DisplayName="Change Present?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
+                                                          <FlowDecision x:Name="__ReferenceID32" Condition="[GlobalVariablesNamespace.GlobalVariables.record.LastValue &lt;&gt; llm_output.text]" DisplayName="Change Present?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 <av:Point x:Key="ShapeLocation">890,1520</av:Point>
-                                                                <av:Size x:Key="ShapeSize">59,59</av:Size>
+                                                                <av:Size x:Key="ShapeSize">60,60</av:Size>
                                                                 <x:String x:Key="TrueLabel">Yes</x:String>
                                                                 <x:String x:Key="FalseLabel">No</x:String>
-                                                                <av:PointCollection x:Key="TrueConnector">949,1549.5 1090,1549.5 1090,1605</av:PointCollection>
+                                                                <av:PointCollection x:Key="TrueConnector">950,1550 1090,1550 1090,1605</av:PointCollection>
                                                                 <av:PointCollection x:Key="FalseConnector">890,1549.5 750,1549.5 750,1605</av:PointCollection>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
