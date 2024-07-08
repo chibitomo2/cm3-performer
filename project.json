@@ -76,6 +76,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Framework\\CM3\\Tests\\Local Test.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "9f950cfe-6dae-4602-86db-71c95aaf8cd6",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\CM3\\Tests\\TC03 - Prompt Template with No Change.xaml"
       }
     ],
     "saveToCloud": false

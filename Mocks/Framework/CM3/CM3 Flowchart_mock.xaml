@@ -138,7 +138,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="874,651" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="790,405" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="new_text" />
       <Variable x:TypeArguments="x:String" Name="old_text" />
@@ -365,7 +365,7 @@
                                         <OutArgument x:TypeArguments="x:String">[new_text]</OutArgument>
                                       </ui:GetFromClipboard.Result>
                                     </ui:GetFromClipboard>
-                                    <utam:MockActivity DisplayName="Mock Mock Placeholder" MockedActivityIdRef="Sequence_35">
+                                    <utam:MockActivity DisplayName="Mock Mock Placeholder" sap2010:WorkflowViewState.IdRef="MockActivity_1" MockedActivityIdRef="Sequence_35">
                                       <utam:MockActivity.MockedActivity>
                                         <Sequence DisplayName="Mock Placeholder" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -376,7 +376,7 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                         </Sequence>
                                       </utam:MockActivity.MockedActivity>
-                                      <ui:GetFromClipboard sap2010:Annotation.AnnotationText="Put the text into mock_new_text for verification purposes" ContinueOnError="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="" TimeoutMS="{x:Null}">
+                                      <ui:GetFromClipboard TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Put the text into mock_new_text for verification purposes" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="GetFromClipboard_2">
                                         <ui:GetFromClipboard.Result>
                                           <OutArgument x:TypeArguments="x:String">[mock_new_text]</OutArgument>
                                         </ui:GetFromClipboard.Result>
@@ -1325,7 +1325,7 @@
                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                        <utam:MockActivity DisplayName="Mock Send Notification" MockedActivityIdRef="InvokeWorkflowFile_5">
+                                                                                        <utam:MockActivity DisplayName="Mock Send Notification" sap2010:WorkflowViewState.IdRef="MockActivity_2" MockedActivityIdRef="InvokeWorkflowFile_5">
                                                                                           <utam:MockActivity.MockedActivity>
                                                                                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for fullpage checkss" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="354,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                                                                                               <ui:InvokeWorkflowFile.Arguments>
@@ -1346,7 +1346,7 @@
                                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                                             </ui:InvokeWorkflowFile>
                                                                                           </utam:MockActivity.MockedActivity>
-                                                                                          <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="">
+                                                                                          <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                                                                                             <ui:MultipleAssign.AssignOperations>
                                                                                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                                                                                 <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -1398,7 +1398,7 @@
                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <utam:MockActivity DisplayName="Mock Send Notification" MockedActivityIdRef="InvokeWorkflowFile_4">
+                                                                                  <utam:MockActivity DisplayName="Mock Send Notification" sap2010:WorkflowViewState.IdRef="MockActivity_3" MockedActivityIdRef="InvokeWorkflowFile_4">
                                                                                     <utam:MockActivity.MockedActivity>
                                                                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for non-fullpage checks" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="354,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                                                                                         <ui:InvokeWorkflowFile.Arguments>
@@ -1419,7 +1419,7 @@
                                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                                       </ui:InvokeWorkflowFile>
                                                                                     </utam:MockActivity.MockedActivity>
-                                                                                    <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="">
+                                                                                    <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                                                                                       <ui:MultipleAssign.AssignOperations>
                                                                                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                                                                           <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -1560,7 +1560,7 @@
                                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                         </scg:Dictionary>
                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                      <utam:MockActivity DisplayName="Mock Mock Placeholder" MockedActivityIdRef="Sequence_36">
+                                                                                      <utam:MockActivity DisplayName="Mock Mock Placeholder" sap2010:WorkflowViewState.IdRef="MockActivity_4" MockedActivityIdRef="Sequence_36">
                                                                                         <utam:MockActivity.MockedActivity>
                                                                                           <Sequence DisplayName="Mock Placeholder" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                                                                             <sap:WorkflowViewStateService.ViewState>
@@ -1571,7 +1571,7 @@
                                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                                           </Sequence>
                                                                                         </utam:MockActivity.MockedActivity>
-                                                                                        <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="">
+                                                                                        <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_45">
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

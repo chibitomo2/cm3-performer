@@ -101,11 +101,7 @@
       <Variable x:TypeArguments="x:String" Name="mock_pushover_title_output" />
       <Variable x:TypeArguments="x:String" Name="mock_pushover_url_output" />
       <Variable x:TypeArguments="s:Guid" Name="record_id" />
-      <Variable x:TypeArguments="x:String" Name="local_storage_folder">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Framework/CM3/Tests/Temp/</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Framework/CM3/Tests/Temp/" Name="local_storage_folder" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
