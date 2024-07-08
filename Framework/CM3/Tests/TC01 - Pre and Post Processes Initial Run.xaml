@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TC01___Pre_and_Post_Processes_Initial_Run" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1752,2201" sap2010:WorkflowViewState.IdRef="TC01___Pre_and_Post_Processes_Initial_Run_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Change_Monitor_3_Performer;assembly=DataService.Change_Monitor_3_Performer" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TC01___Pre_and_Post_Processes_Initial_Run" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="730,2292" sap2010:WorkflowViewState.IdRef="TC01___Pre_and_Post_Processes_Initial_Run_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Change_Monitor_3_Performer;assembly=DataService.Change_Monitor_3_Performer" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -94,26 +94,31 @@
       <AssemblyReference>UiPath.Testing</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TC01___Pre_and_Post_Processes_Initial_Run" sap:VirtualizedContainerService.HintSize="558,2136" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TC01___Pre_and_Post_Processes_Initial_Run" sap:VirtualizedContainerService.HintSize="558,2227" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="id" />
       <Variable x:TypeArguments="x:String" Name="mock_pushover_message_output" />
       <Variable x:TypeArguments="x:String" Name="mock_pushover_title_output" />
       <Variable x:TypeArguments="x:String" Name="mock_pushover_url_output" />
       <Variable x:TypeArguments="s:Guid" Name="record_id" />
+      <Variable x:TypeArguments="x:String" Name="local_storage_folder">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Framework/CM3/Tests/Temp/</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="496,1136" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="496,636" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[id]</OutArgument>
         </Assign.To>
@@ -121,7 +126,7 @@
           <InArgument x:TypeArguments="x:String">95e3a02b-ae2c-ef11-86d2-000d3ab7cabd</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="s:Guid">[record_id]</OutArgument>
         </Assign.To>
@@ -129,7 +134,7 @@
           <InArgument x:TypeArguments="s:Guid">[Guid.Parse(id)]</InArgument>
         </Assign.Value>
       </Assign>
-      <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Set up the check parameters" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="434,788" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .FullPageCheck = false,  .LastValue = &quot;&quot;,  .MainURL = &quot;https://waste-services.sutton.gov.uk/waste*&quot;,  .MainWindowSelector = &quot;&lt;html app='msedge.exe' /&gt;&quot;,  .Name = &quot;TC01 - Pre and Post Processes Initial Run&quot;,  .PostProcess = &quot;post-95e3a02b-ae2c-ef11-86d2-000d3ab7cabd&quot;,  .PreProcess = &quot;pre-95e3a02b-ae2c-ef11-86d2-000d3ab7cabd&quot;,  .Prompt = &quot;Give me the address on the page. Do not add any other detail or description.&quot;,  .PromptTemplate = new Prompts() With { .Id = Nothing },  .Site = &quot;Sutton Council&quot;,  .UseVision = false, .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
+      <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Set up the check parameters" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .FullPageCheck = false,  .LastValue = &quot;&quot;,  .MainURL = &quot;https://waste-services.sutton.gov.uk/waste*&quot;,  .MainWindowSelector = &quot;&lt;html app='msedge.exe' /&gt;&quot;,  .Name = &quot;TC01 - Pre and Post Processes Initial Run&quot;,  .PostProcess = &quot;post-95e3a02b-ae2c-ef11-86d2-000d3ab7cabd&quot;,  .PreProcess = &quot;pre-95e3a02b-ae2c-ef11-86d2-000d3ab7cabd&quot;,  .Prompt = &quot;Give me the address on the page. Do not add any other detail or description.&quot;,  .PromptTemplate = new Prompts() With { .Id = Nothing },  .Site = &quot;Sutton Council&quot;,  .UseVision = false, .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
         <uda:UpdateEntityRecord.State>
           <udam:RecordState RequiredFieldCount="2">
             <udam:RecordState.SelectedFields>
@@ -198,19 +203,24 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uda:UpdateEntityRecord>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Reset Temporary Storage Area - Invoke Workflow File (Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml)" sap:VirtualizedContainerService.HintSize="434,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="folder_path">[local_storage_folder]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="496,318" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flow_mock - Invoke Workflow File (Mocks\Framework\CM3\CM3 Flow_mock.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Mocks\Framework\CM3\CM3 Flow_mock.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flow_mock - Invoke Workflow File (Mocks\Framework\CM3\CM3 Flow_mock.xaml)" sap:VirtualizedContainerService.HintSize="388,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Mocks\Framework\CM3\CM3 Flow_mock.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="id">[id]</InArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="mock_pushover_message_output">[mock_pushover_message_output]</OutArgument>
@@ -221,7 +231,7 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="496,597" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="496,1185" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
       </Sequence.Variables>
@@ -230,7 +240,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" sap2010:Annotation.AnnotationText="Get record to extract last value" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="388,203" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[record_id]" TimeoutInMs="30000">
+      <uda:GetEntityRecordById x:TypeArguments="c:ChangeMonitorChecks" sap2010:Annotation.AnnotationText="Get record to extract last value" ContinueOnError="False" DisplayName="Get Entity Record By Id" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="388,205" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[record]" RecordId="[record_id]" TimeoutInMs="30000">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -239,7 +249,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uda:GetEntityRecordById>
-      <uta:VerifyExpressionWithOperator KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Last Value is expected value" sap2010:Annotation.AnnotationText="Verify last value" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_1" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+      <uta:VerifyExpressionWithOperator KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Last Value is expected value" sap2010:Annotation.AnnotationText="Verify last value" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="388,257" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_1" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
         <uta:VerifyExpressionWithOperator.FirstExpression>
           <InArgument x:TypeArguments="x:String">[record.LastValue.ToString]</InArgument>
         </uta:VerifyExpressionWithOperator.FirstExpression>
@@ -249,12 +259,18 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uta:VerifyExpressionWithOperator>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Pushover Message Sent Successfully - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Pushover Message Sent Successfully.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Pushover Message Sent Successfully.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Screenshot Was Saved - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml)" sap:VirtualizedContainerService.HintSize="388,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="s:Guid" x:Key="record_id">[record_id]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="local_storage_folderpath">[local_storage_folder]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Pushover Message Sent Successfully - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Pushover Message Sent Successfully.xaml)" sap:VirtualizedContainerService.HintSize="388,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Pushover Message Sent Successfully.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="mock_pushover_message_output">[mock_pushover_message_output]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="mock_pushover_title_output">[mock_pushover_title_output]</InArgument>
@@ -262,6 +278,11 @@
           <InArgument x:TypeArguments="x:String" x:Key="expected_message" xml:space="preserve"> --&gt; 22 Godalming Avenue, Wallington, SM6 8NG</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="expected_title">TC01 - Pre and Post Processes Initial Run (Sutton Council)</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="expected_url">https://waste-services.sutton.gov.uk/waste*</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Reset Temporary Storage Area - Invoke Workflow File (Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml)" sap:VirtualizedContainerService.HintSize="388,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="folder_path">Framework/CM3/Tests/Temp/</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>

@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>814,3256</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>730,3472</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TC02___FPC___Prompt_Template_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,7 +111,7 @@
       <AssemblyReference>DataService.CM3_Testing_Library</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TC02___FPC___Prompt_Template" sap:VirtualizedContainerService.HintSize="574,3191" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TC02___FPC___Prompt_Template" sap:VirtualizedContainerService.HintSize="574,3407" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:Guid" Name="record_id" />
       <Variable x:TypeArguments="x:String" Name="mock_new_text" />
@@ -277,7 +277,7 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="512,1658" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="512,1874" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
         <Variable x:TypeArguments="scg:IEnumerable(ucas:StorageFileInfo)" Name="storage_files_list" />
@@ -342,20 +342,26 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify No Pushover Notification Was Sent - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify No Pushover Notification Was Sent.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify No Pushover Notification Was Sent.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify No Pushover Notification Was Sent - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify No Pushover Notification Was Sent.xaml)" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify No Pushover Notification Was Sent.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="mock_pushover_message_output">[mock_pushover_message_output]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="mock_pushover_title_output">[mock_pushover_title_output]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="mock_pushover_url_output">[mock_pushover_url_output]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Screenshot Was Saved - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Screenshot Was Saved - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml)" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="s:Guid" x:Key="record_id">[record_id]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="local_storage_folderpath">[local_storage_folder]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Recreate Temp folder for this test execution" DisplayName="Reset Temporary Storage Area" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Diff Report Was Not Saved - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Diff Report Was Not Saved.xaml)" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Diff Report Was Not Saved.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="s:Guid" x:Key="record_id">[record_id]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="local_storage_folderpath">[local_storage_folder]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Recreate Temp folder for this test execution" DisplayName="Reset Temporary Storage Area" sap:VirtualizedContainerService.HintSize="450,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="folder_path">[local_storage_folder]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
