@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>730,3472</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1777,3438</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TC02___FPC___Prompt_Template_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,7 +111,7 @@
       <AssemblyReference>DataService.CM3_Testing_Library</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TC02___FPC___Prompt_Template" sap:VirtualizedContainerService.HintSize="574,3407" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TC02___FPC___Prompt_Template" sap:VirtualizedContainerService.HintSize="574,3373" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:Guid" Name="record_id" />
       <Variable x:TypeArguments="x:String" Name="mock_new_text" />
@@ -125,13 +125,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="512,1127" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="512,1112" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="s:Guid">[record_id]</OutArgument>
         </Assign.To>
@@ -139,7 +139,7 @@
           <InArgument x:TypeArguments="s:Guid">[Guid.Parse(id)]</InArgument>
         </Assign.Value>
       </Assign>
-      <ucas:DeleteStorageFile TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Delete storage file so that CM is performing a FPC for the first time" DisplayName="Delete Storage File" sap:VirtualizedContainerService.HintSize="434,117" sap2010:WorkflowViewState.IdRef="DeleteStorageFile_1" Path="[id]" StorageBucketName="[storage_bucket]">
+      <ucas:DeleteStorageFile TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Delete storage file so that CM is performing a FPC for the first time" DisplayName="Delete Storage File" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="DeleteStorageFile_1" Path="[id]" StorageBucketName="[storage_bucket]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -148,7 +148,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ucas:DeleteStorageFile>
-      <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Set up the check configuration" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="434,101" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .FullPageCheck = true,  .LastValue = &quot;&quot;,  .MainURL = &quot;https://www.westminster.gov.uk/parking/electric-vehicles&quot;,  .MainWindowSelector = &quot;&lt;html app='msedge.exe' title='*' /&gt;&quot;,  .Name = &quot;TC02 - FPC Initial Run + Prompt Template&quot;,  .PostProcess = &quot;&quot;,  .PreProcess = &quot;&quot;,  .Prompt = &quot;&quot;,  .PromptTemplate = new Prompts() With { .Id = Guid.Parse(&quot;AFF71273-852D-EF11-86C3-000D3ABAB3E2&quot;) },  .Site = &quot;Westminster Council&quot;,  .UseVision = false, .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
+      <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Set up the check configuration" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="434,99" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .FullPageCheck = true,  .LastValue = &quot;&quot;,  .MainURL = &quot;https://www.westminster.gov.uk/parking/electric-vehicles&quot;,  .MainWindowSelector = &quot;&lt;html app='msedge.exe' title='*' /&gt;&quot;,  .Name = &quot;TC02 - FPC Initial Run + Prompt Template&quot;,  .PostProcess = &quot;&quot;,  .PreProcess = &quot;&quot;,  .Prompt = &quot;&quot;,  .PromptTemplate = new Prompts() With { .Id = Guid.Parse(&quot;AFF71273-852D-EF11-86C3-000D3ABAB3E2&quot;) },  .Site = &quot;Westminster Council&quot;,  .UseVision = false, .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
         <uda:UpdateEntityRecord.State>
           <udam:RecordState RequiredFieldCount="2">
             <udam:RecordState.SelectedFields>
@@ -228,13 +228,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uda:UpdateEntityRecord>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Remove Attachment From Field - Invoke Workflow File (Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml)" sap:VirtualizedContainerService.HintSize="434,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Remove Attachment From Field - Invoke Workflow File (Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="s:Guid" x:Key="id">[record_id]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="field_name">screenshot</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Remove attachment from DiffReport field" DisplayName="Remove Attachment From Field - Invoke Workflow File (Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml)" sap:VirtualizedContainerService.HintSize="434,238" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Remove attachment from DiffReport field" DisplayName="Remove Attachment From Field - Invoke Workflow File (Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml)" sap:VirtualizedContainerService.HintSize="434,235" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Remove Attachment From Field.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="s:Guid" x:Key="id">[record_id]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="field_name">DiffReport</InArgument>
@@ -247,7 +247,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Reset Temp folder for this test execution" DisplayName="Reset Temporary Storage Area" sap:VirtualizedContainerService.HintSize="434,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Reset Temp folder for this test execution" DisplayName="Reset Temporary Storage Area" sap:VirtualizedContainerService.HintSize="434,226" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Utilities\Reset Temporary Storage Area.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="folder_path">[local_storage_folder]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
@@ -277,11 +277,9 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="512,1874" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="512,1855" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="c:ChangeMonitorChecks" Name="record" />
-        <Variable x:TypeArguments="scg:IEnumerable(ucas:StorageFileInfo)" Name="storage_files_list" />
-        <Variable x:TypeArguments="x:String" Name="saved_text" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -297,7 +295,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uda:GetEntityRecordById>
-      <Sequence sap2010:Annotation.AnnotationText="Verify that &quot;Last Value&quot; was set correctly" sap:VirtualizedContainerService.HintSize="450,574" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <Sequence sap2010:Annotation.AnnotationText="Verify that &quot;Last Value&quot; was set correctly" sap:VirtualizedContainerService.HintSize="450,569" sap2010:WorkflowViewState.IdRef="Sequence_10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -305,7 +303,7 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Testing if record fields were set correctly&quot;]">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Testing if record fields were set correctly&quot;]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -313,7 +311,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:LogMessage>
-        <uta:VerifyExpressionWithOperator KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Last Value is expected value" sap2010:Annotation.AnnotationText="Verify Last Value = &quot;No changes&quot;" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="388,248" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_6" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Last Value is expected value" sap2010:Annotation.AnnotationText="Verify Last Value = &quot;No changes&quot;" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="388,245" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_6" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
           <uta:VerifyExpressionWithOperator.FirstExpression>
             <InArgument x:TypeArguments="x:String">[record.LastValue]</InArgument>
           </uta:VerifyExpressionWithOperator.FirstExpression>
@@ -329,7 +327,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </uta:VerifyExpressionWithOperator>
       </Sequence>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Verify that the first storage file is created and contains the current page text" DisplayName="Verify First Storage Bucket File" sap:VirtualizedContainerService.HintSize="450,251" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="[UiPath.Core.Activities.LogEntryType.No]" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify First Storage Bucket File.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Verify that the first storage file is created and contains the current page text" DisplayName="Verify First Storage Bucket File" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="[UiPath.Core.Activities.LogEntryType.No]" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify First Storage Bucket File.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="file_name">[id]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="storage_bucket_name">[storage_bucket]</InArgument>
@@ -342,20 +340,20 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify No Pushover Notification Was Sent - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify No Pushover Notification Was Sent.xaml)" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify No Pushover Notification Was Sent.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify No Pushover Notification Was Sent - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify No Pushover Notification Was Sent.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify No Pushover Notification Was Sent.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="mock_pushover_message_output">[mock_pushover_message_output]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="mock_pushover_title_output">[mock_pushover_title_output]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="mock_pushover_url_output">[mock_pushover_url_output]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Screenshot Was Saved - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml)" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Screenshot Was Saved - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Screenshot Was Saved.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="s:Guid" x:Key="record_id">[record_id]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="local_storage_folderpath">[local_storage_folder]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Diff Report Was Not Saved - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Diff Report Was Not Saved.xaml)" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Diff Report Was Not Saved.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify Diff Report Was Not Saved - Invoke Workflow File (Framework\CM3\Tests\Verifications\Verify Diff Report Was Not Saved.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Framework\CM3\Tests\Verifications\Verify Diff Report Was Not Saved.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="s:Guid" x:Key="record_id">[record_id]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="local_storage_folderpath">[local_storage_folder]</InArgument>
