@@ -138,7 +138,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="1837,541" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="1837,770" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="new_text" />
       <Variable x:TypeArguments="x:String" Name="old_text" />
@@ -425,7 +425,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">920,515 920,535</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Trim Copied Text" sap:VirtualizedContainerService.HintSize="550,1182" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <Sequence DisplayName="Trim Copied Text" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_37">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1393,11 +1393,16 @@
                                                                             <av:PointCollection x:Key="ConnectorLocation">1035,1850 920,1850 920,1950</av:PointCollection>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Update record:&#xA;- new value&#xA;- last checked date" ContinueOnError="False" DisplayName="Update Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_3" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(),  .LastValue = clean_llm_output, .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
+                                                                        <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Update record:&#xA;- new value&#xA;- last checked date" ContinueOnError="False" DisplayName="Update Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="334,326" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_3" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChanged = now(),  .LastChecked = now(),  .LastValue = clean_llm_output, .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
                                                                           <uda:UpdateEntityRecord.State>
                                                                             <udam:RecordState RequiredFieldCount="2">
                                                                               <udam:RecordState.SelectedFields>
-                                                                                <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="2">
+                                                                                <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="3">
+                                                                                  <udam:DynamicEntityField Id="e97bfb76-ca3e-ef11-86c1-000d3ab70e24" Name="LastChanged">
+                                                                                    <udam:DynamicEntityField.ArgumentValue>
+                                                                                      <InArgument x:TypeArguments="s:DateTimeOffset">[now()]</InArgument>
+                                                                                    </udam:DynamicEntityField.ArgumentValue>
+                                                                                  </udam:DynamicEntityField>
                                                                                   <udam:DynamicEntityField Id="2786ada5-14c1-ee11-85f9-0022489f653e" Name="LastChecked">
                                                                                     <udam:DynamicEntityField.ArgumentValue>
                                                                                       <InArgument x:TypeArguments="s:DateTimeOffset">[now()]</InArgument>
@@ -1421,16 +1426,16 @@
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                         </uda:UpdateEntityRecord>
                                                                         <FlowStep.Next>
-                                                                          <FlowDecision x:Name="__ReferenceID12" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PostProcess &lt;&gt; &quot;&quot;]" DisplayName="Post-Process Specified?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
+                                                                          <FlowDecision x:Name="__ReferenceID12" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PostProcess &lt;&gt; &quot;&quot;]" DisplayName="Post-Process Specified?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                 <av:Point x:Key="ShapeLocation">890,1950</av:Point>
-                                                                                <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                                                                <av:Size x:Key="ShapeSize">59,59</av:Size>
                                                                                 <x:String x:Key="TrueLabel">Yes</x:String>
                                                                                 <x:String x:Key="FalseLabel">No</x:String>
-                                                                                <av:PointCollection x:Key="TrueConnector">950,1980 1090,1980 1090,2025</av:PointCollection>
-                                                                                <av:PointCollection x:Key="FalseConnector">920,2010 920,2115</av:PointCollection>
+                                                                                <av:PointCollection x:Key="TrueConnector">949,1979.5 1090,1979.5 1090,2025</av:PointCollection>
+                                                                                <av:PointCollection x:Key="FalseConnector">919.5,2009 919.5,2039 920,2039 920,2115</av:PointCollection>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                             <FlowDecision.True>
