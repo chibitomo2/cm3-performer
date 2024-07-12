@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1578,1205</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1116,2008</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CM3_Flow_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -104,17 +104,17 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CM3_Flow" sap:VirtualizedContainerService.HintSize="518,939" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CM3_Flow" sap:VirtualizedContainerService.HintSize="614,1943" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,851" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="552,1855" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <utam:MockActivity DisplayName="Mock CM3 Flowchart - Invoke Workflow File (Framework\CM3\CM3 Flowchart.xaml)" MockedActivityIdRef="InvokeWorkflowFile_1">
           <utam:MockActivity.MockedActivity>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flowchart - Invoke Workflow File (Framework\CM3\CM3 Flowchart.xaml)" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\CM3 Flowchart.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flowchart - Invoke Workflow File (Framework\CM3\CM3 Flowchart.xaml)" sap:VirtualizedContainerService.HintSize="334,174" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\CM3 Flowchart.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="id">[id]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="storage_bucket" />
@@ -147,7 +147,7 @@
         </utam:MockActivity>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,666" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="518,1666" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,32 +158,32 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="416,596" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence sap:VirtualizedContainerService.HintSize="512,1595" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
-              <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="354,256" sap2010:WorkflowViewState.IdRef="If_1">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[exception.Message]" />
+              <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="450,742" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,283" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Push Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Push Notification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_message">[GlobalVariablesNamespace.GlobalVariables.record.LastValue + " &gt; " + "ERROR"]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_message">ERROR</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
                         <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
@@ -193,29 +193,24 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Skipping notification. User and API keys not supplied in check configuration&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Skipping notification. User and API keys not supplied in check configuration&quot;]" />
                   </Sequence>
                 </If.Else>
               </If>
-              <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Update Last Value to &quot;ERROR&quot;" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="354,79" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(),  .LastValue = &quot;ERROR&quot;, .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
+              <uda:UpdateEntityRecord x:TypeArguments="c:ChangeMonitorChecks" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" sap2010:Annotation.AnnotationText="Update Last Value to &quot;ERROR&quot;" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="1186ada5-14c1-ee11-85f9-0022489f653e" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="450,289" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeMonitorChecks() With {  .LastChecked = now(), .Id = record_id }]" RecordId="[record_id]" TimeoutInMs="30000">
                 <uda:UpdateEntityRecord.State>
                   <udam:RecordState RequiredFieldCount="2">
                     <udam:RecordState.SelectedFields>
-                      <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="2">
+                      <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="1">
                         <udam:DynamicEntityField Id="2786ada5-14c1-ee11-85f9-0022489f653e" Name="LastChecked">
                           <udam:DynamicEntityField.ArgumentValue>
                             <InArgument x:TypeArguments="s:DateTimeOffset">[now()]</InArgument>
-                          </udam:DynamicEntityField.ArgumentValue>
-                        </udam:DynamicEntityField>
-                        <udam:DynamicEntityField Id="2486ada5-14c1-ee11-85f9-0022489f653e" Name="LastValue">
-                          <udam:DynamicEntityField.ArgumentValue>
-                            <InArgument x:TypeArguments="x:String">ERROR</InArgument>
                           </udam:DynamicEntityField.ArgumentValue>
                         </udam:DynamicEntityField>
                       </scg:List>
@@ -224,12 +219,37 @@
                 </uda:UpdateEntityRecord.State>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uda:UpdateEntityRecord>
+              <uda:CreateEntityRecord x:TypeArguments="c:ChangeHistory" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Create Entity Record" EntityId="86e36657-5740-ef11-86c1-000d3ab70e24" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="450,301" sap2010:WorkflowViewState.IdRef="CreateEntityRecord`1_1" InputEntityInFieldView="[new Change_Monitor_3_Performer.ChangeHistory() With {  .CheckID = record_id.ToString,  .DateChanged = now(),  .Value = &quot;ERROR&quot; }]" TimeoutInMs="30000">
+                <uda:CreateEntityRecord.State>
+                  <udam:RecordState>
+                    <udam:RecordState.SelectedFields>
+                      <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="3">
+                        <udam:DynamicEntityField Id="36b0ee11-5b40-ef11-86c1-000d3ab70e24" Name="CheckID">
+                          <udam:DynamicEntityField.ArgumentValue>
+                            <InArgument x:TypeArguments="x:String">[record_id.ToString]</InArgument>
+                          </udam:DynamicEntityField.ArgumentValue>
+                        </udam:DynamicEntityField>
+                        <udam:DynamicEntityField Id="61a10526-5b40-ef11-86c1-000d3ab70e24" Name="DateChanged">
+                          <udam:DynamicEntityField.ArgumentValue>
+                            <InArgument x:TypeArguments="s:DateTimeOffset">[now()]</InArgument>
+                          </udam:DynamicEntityField.ArgumentValue>
+                        </udam:DynamicEntityField>
+                        <udam:DynamicEntityField Id="e06c322c-5b40-ef11-86c1-000d3ab70e24" Name="Value">
+                          <udam:DynamicEntityField.ArgumentValue>
+                            <InArgument x:TypeArguments="x:String">ERROR</InArgument>
+                          </udam:DynamicEntityField.ArgumentValue>
+                        </udam:DynamicEntityField>
+                      </scg:List>
+                    </udam:RecordState.SelectedFields>
+                  </udam:RecordState>
+                </uda:CreateEntityRecord.State>
+              </uda:CreateEntityRecord>
             </Sequence>
           </ActivityAction>
         </Catch>
