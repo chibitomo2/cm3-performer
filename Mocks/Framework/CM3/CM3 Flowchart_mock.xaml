@@ -269,34 +269,39 @@
                       <av:PointCollection x:Key="ConnectorLocation">920,535 920,555</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Upload Screenshot + Copy Page Text" sap:VirtualizedContainerService.HintSize="1208,2287" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Upload Screenshot + Copy Page Text" sap:VirtualizedContainerService.HintSize="712,2073" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="1146,2199" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
+                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Main check" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: AVEENO® Skin Relief Moisturising Lotion 300ml - Boots" sap:VirtualizedContainerService.HintSize="650,1985" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="05193200-5562-4010-8f71-d38aba8dd2d5" Version="V2" WindowResize="Maximize">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1112,1978" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="616,1764" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[Not String.IsNullOrEmpty(record.StrictSelector.StrictSelector)]" sap:VirtualizedContainerService.HintSize="1050,903" sap2010:WorkflowViewState.IdRef="If_7">
+                            <If sap2010:Annotation.AnnotationText="Wait for an element to appear on the screen before continuing" Condition="[Not String.IsNullOrEmpty(record.StrictSelector.StrictSelector)]" sap:VirtualizedContainerService.HintSize="554,689" sap2010:WorkflowViewState.IdRef="If_7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1016,708" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,463" sap2010:WorkflowViewState.IdRef="Sequence_46">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="954,175" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Using Strict Selector: &quot; + record.StrictSelector.StrictSelector]" />
-                                  <uix:NCheckState DisplayName="Check App State 'Add'" sap:VirtualizedContainerService.HintSize="954,445" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="05193200-5562-4010-8f71-d38aba8dd2d5" Timeout="20" Version="V3">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Using Wait for Strict Selector Visible: &quot; + record.StrictSelector.StrictSelector]" />
+                                  <uix:NCheckState DisplayName="Check App State 'Add'" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="354,200" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="05193200-5562-4010-8f71-d38aba8dd2d5" Timeout="20" Version="V3">
                                     <uix:NCheckState.IfExists>
                                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -341,7 +346,7 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <ui:RetryScope sap2010:Annotation.AnnotationText="Copy page text into clipboard, then into a variable" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1050,985" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="30" RetryInterval="00:00:01">
+                            <ui:RetryScope sap2010:Annotation.AnnotationText="Copy page text into clipboard, then into a variable" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="554,985" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="30" RetryInterval="00:00:01">
                               <ui:RetryScope.ActivityBody>
                                 <ActivityAction>
                                   <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,754" sap2010:WorkflowViewState.IdRef="Sequence_3">
