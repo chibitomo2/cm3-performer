@@ -140,7 +140,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="841,451" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="1828,770" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="new_text" />
       <Variable x:TypeArguments="x:String" Name="old_text" />
@@ -171,7 +171,7 @@
           <av:PointCollection x:Key="ConnectorLocation">920,195 920,225 919.5,225 919.5,240</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Initialize Check" sap:VirtualizedContainerService.HintSize="512,753" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="Initialize Check" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -323,16 +323,16 @@
         </ui:LogMessage>
       </Sequence>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID16" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PreProcess &lt;&gt; &quot;&quot;]" DisplayName="Pre-Process Specified?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID16" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PreProcess &lt;&gt; &quot;&quot;]" DisplayName="Pre-Process Specified?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">890,240</av:Point>
-              <av:Size x:Key="ShapeSize">60,60</av:Size>
+              <av:Size x:Key="ShapeSize">59,59</av:Size>
               <av:PointCollection x:Key="TrueConnector">890,269.5 740,269.5 740,355</av:PointCollection>
               <x:String x:Key="TrueLabel">Yes</x:String>
               <x:String x:Key="FalseLabel">No</x:String>
-              <av:PointCollection x:Key="FalseConnector">920,300 920,355</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">919.5,299 919.5,329 920,329 920,355</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -411,7 +411,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,177" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Using Wait for Strict Selector Visible: &quot; + record.StrictSelector.StrictSelector]" />
-                                        <uix:NCheckState ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Check App State 'Add'" EnableIfExists="False" EnableIfNotExists="False" Exists="{x:Null}" sap:VirtualizedContainerService.HintSize="354,202" sap2010:WorkflowViewState.IdRef="NCheckState_1" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="05193200-5562-4010-8f71-d38aba8dd2d5" Timeout="20" Version="V3">
+                                        <uix:NCheckState DisplayName="Check App State 'Add'" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="354,202" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="05193200-5562-4010-8f71-d38aba8dd2d5" Timeout="20" Version="V3">
                                           <uix:NCheckState.IfExists>
                                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -967,18 +967,18 @@
                             </Flowchart>
                           </Sequence>
                           <FlowStep.Next>
-                            <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID24" DisplayName="Flow Switch" Expression="[check_mode]" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
+                            <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID24" DisplayName="Flow Switch" Expression="[check_mode]" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">890,830</av:Point>
-                                  <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                  <av:Size x:Key="ShapeSize">59,59</av:Size>
                                   <av:PointCollection x:Key="0Connector">890,859.5 500,859.5 500,915</av:PointCollection>
                                   <av:PointCollection x:Key="1Connector">890,859.5 660,859.5 660,915</av:PointCollection>
                                   <av:PointCollection x:Key="2Connector">890,859.5 820,859.5 820,915</av:PointCollection>
-                                  <av:PointCollection x:Key="3Connector">950,860 1020,860 1020,915</av:PointCollection>
-                                  <av:PointCollection x:Key="4Connector">950,860 1180,860 1180,915</av:PointCollection>
-                                  <av:PointCollection x:Key="5Connector">950,860 1340,860 1340,915</av:PointCollection>
+                                  <av:PointCollection x:Key="3Connector">949,859.5 1020,859.5 1020,915</av:PointCollection>
+                                  <av:PointCollection x:Key="4Connector">949,859.5 1180,859.5 1180,915</av:PointCollection>
+                                  <av:PointCollection x:Key="5Connector">949,859.5 1340,859.5 1340,915</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <FlowStep x:Key="0" x:Name="__ReferenceID25" sap2010:WorkflowViewState.IdRef="FlowStep_12">
@@ -1117,16 +1117,16 @@
                                           </isactr:ConnectorActivity>
                                         </Sequence>
                                         <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID14" Condition="[old_text &lt;&gt; new_text]" DisplayName="Change Present?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                          <FlowDecision x:Name="__ReferenceID14" Condition="[old_text &lt;&gt; new_text]" DisplayName="Change Present?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <av:Point x:Key="ShapeLocation">550,1280</av:Point>
-                                                <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                                <av:Size x:Key="ShapeSize">59,59</av:Size>
                                                 <x:String x:Key="TrueLabel">Yes</x:String>
                                                 <x:String x:Key="FalseLabel">No</x:String>
-                                                <av:PointCollection x:Key="TrueConnector">580,1340 580,1405</av:PointCollection>
-                                                <av:PointCollection x:Key="FalseConnector">610,1310 640,1310 640,1550 865,1550</av:PointCollection>
+                                                <av:PointCollection x:Key="TrueConnector">579.5,1339 579.5,1369 580,1369 580,1405</av:PointCollection>
+                                                <av:PointCollection x:Key="FalseConnector">609,1309.5 639,1309.5 639,1550 865,1550</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <FlowDecision.True>
@@ -1329,18 +1329,15 @@
                                                               </Assign>
                                                             </Sequence>
                                                             <FlowStep.Next>
-                                                              <FlowDecision x:Name="__ReferenceID32" DisplayName="Change Present?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
-                                                                <FlowDecision.Condition>
-                                                                  <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="most_recent_change_history.Value &lt;&gt; clean_llm_output" />
-                                                                </FlowDecision.Condition>
+                                                              <FlowDecision x:Name="__ReferenceID32" Condition="[most_recent_change_history.Value &lt;&gt; clean_llm_output]" DisplayName="Change Present?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     <av:Point x:Key="ShapeLocation">890,1760</av:Point>
-                                                                    <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                                                    <av:Size x:Key="ShapeSize">59,59</av:Size>
                                                                     <x:String x:Key="TrueLabel">Yes</x:String>
                                                                     <x:String x:Key="FalseLabel">No</x:String>
-                                                                    <av:PointCollection x:Key="TrueConnector">950,1790 1090,1790 1090,1845</av:PointCollection>
+                                                                    <av:PointCollection x:Key="TrueConnector">949,1789.5 1090,1789.5 1090,1845</av:PointCollection>
                                                                     <av:PointCollection x:Key="FalseConnector">890,1789.5 750,1789.5 750,1845</av:PointCollection>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
@@ -1353,14 +1350,14 @@
                                                                         <av:PointCollection x:Key="ConnectorLocation">1090,1915 1090,1955</av:PointCollection>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <Sequence DisplayName="Send Pushover Notification" sap:VirtualizedContainerService.HintSize="704,1806" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                                    <Sequence DisplayName="Send Pushover Notification" sap:VirtualizedContainerService.HintSize="704,2158" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="642,1718" sap2010:WorkflowViewState.IdRef="If_1">
+                                                                      <If sap2010:Annotation.AnnotationText="If User and API keys have been supplied, send a notification" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey IsNot Nothing]" sap:VirtualizedContainerService.HintSize="642,2070" sap2010:WorkflowViewState.IdRef="If_1">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1369,13 +1366,13 @@
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <If.Then>
-                                                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="608,1358" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="608,1711" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <If sap2010:Annotation.AnnotationText="If the change is from a fullpage check, and if it is not &quot;no changes&quot;, send only the new value. Otherwise, send both old and new values" Condition="[cbool(GlobalVariablesNamespace.GlobalVariables.record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="546,1270" sap2010:WorkflowViewState.IdRef="If_2">
+                                                                            <If sap2010:Annotation.AnnotationText="If the change is from a fullpage check, and if it is not &quot;no changes&quot;, send only the new value. Otherwise, send both old and new values" Condition="[cbool(GlobalVariablesNamespace.GlobalVariables.record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="546,1623" sap2010:WorkflowViewState.IdRef="If_2">
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1384,13 +1381,13 @@
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                               <If.Then>
-                                                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,747" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,922" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <If sap2010:Annotation.AnnotationText="Send notification if it does not contain &quot;No changes&quot;. Note that the change for a brand new check will be &quot;No changes&quot; because the initial storage bucket file is based on the current text. Comparing current text with current text = No changes." Condition="[Not clean_llm_output.Contains(&quot;No changes&quot;)]" sap:VirtualizedContainerService.HintSize="450,659" sap2010:WorkflowViewState.IdRef="If_3">
+                                                                                  <If sap2010:Annotation.AnnotationText="Send notification if it does not contain &quot;No changes&quot;. Note that the change for a brand new check will be &quot;No changes&quot; because the initial storage bucket file is based on the current text. Comparing current text with current text = No changes." Condition="[Not clean_llm_output.Contains(&quot;No changes&quot;)]" sap:VirtualizedContainerService.HintSize="450,834" sap2010:WorkflowViewState.IdRef="If_3">
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1399,34 +1396,55 @@
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                     <If.Then>
-                                                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,317" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,498" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for fullpage checkss" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="354,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
-                                                                                          <ui:InvokeWorkflowFile.Arguments>
-                                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
-                                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
-                                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_message">[clean_llm_output]</InArgument>
-                                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
-                                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
-                                                                                            <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
-                                                                                            <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
-                                                                                          </ui:InvokeWorkflowFile.Arguments>
-                                                                                          <sap:WorkflowViewStateService.ViewState>
-                                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                                            </scg:Dictionary>
-                                                                                          </sap:WorkflowViewStateService.ViewState>
-                                                                                        </ui:InvokeWorkflowFile>
+                                                                                        <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACr2VQW/iMBCF/0rkc9oClfaAtIeSqioqLFFhe1lVaAhD4iaxs/aYbRb1v++EhIiUSpVWoieUZ/v5e/Z42Ik7idnaBloRSIVGDHdijmCiBFYZ1oNi+OvZF2NVOGqFnfgBOYqhSCjPhC9upS0yKN+JaCMjC5JasdjzvntTtBZi9MB6YcYbegt8Jd/rd4fuF9MJL1+URWUmFWHMZL640yYHqqXrQb2BjNl7JyYa1qPyFjfgMp5BxuGbLx7xt5MG17XABhX+REfQII30uhRvfhsmrxlO8hzpnUihs4mnNMmNrD29VeXYolsyUsVnACVJ2Slmq34CeZh3dkqdojqlPKgdypuiyA58KX7FGTq7L6ou3EHssP1k8augzOlrarQu0uPkP2g+3N0XMxWA2oI9zDumWX5cap2RDtmiUj298c6JyP1o5ui4IT3z2rGyBCrCEAxTEhoe2Ikn/q29+pe9yx6bcbdTGJE2D3ynQxE5Szq/WIMxqKIEVXxR8JvR230p3EQkt5LKJkjgDBDfJwOsXtikOY/+sukRdvlieTNf3BMVU6RE892LUFviaxYBsD/H06krniBzWBG2+sjoP1xqY8K80UMjczAlczZdOIQo5V2OM33rZmqAqlffJGiHjlcN9qvqDN2rbRqx/TzirEA+jNoxMMjncpJ7Nl+wFgIl/HXVv3pvMQEVu6q1DsW+KUzhNeTPufzL0qDXYz+wI/ZOuXyChGdXR7aBzPJjqv48RpmO0roA/gGNyL6XzQYAAA==" ConnectionId="94926e8a-3eb1-4b67-aebe-c677dd8f749a" DisplayName="Send Pushover Message" sap:VirtualizedContainerService.HintSize="354,410" sap2010:WorkflowViewState.IdRef="ConnectorActivity_7" UiPathActivityTypeId="225a921d-98be-32fb-ac54-c05912d45252">
+                                                                                          <isactr:ConnectorActivity.FieldObjects>
+                                                                                            <isactr:FieldObject Name="html" Type="FieldArgument">
+                                                                                              <isactr:FieldObject.Value>
+                                                                                                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                                                                              </isactr:FieldObject.Value>
+                                                                                            </isactr:FieldObject>
+                                                                                            <isactr:FieldObject Name="message" Type="FieldArgument">
+                                                                                              <isactr:FieldObject.Value>
+                                                                                                <InArgument x:TypeArguments="x:String">[clean_llm_output]</InArgument>
+                                                                                              </isactr:FieldObject.Value>
+                                                                                            </isactr:FieldObject>
+                                                                                            <isactr:FieldObject Name="title" Type="FieldArgument">
+                                                                                              <isactr:FieldObject.Value>
+                                                                                                <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
+                                                                                              </isactr:FieldObject.Value>
+                                                                                            </isactr:FieldObject>
+                                                                                            <isactr:FieldObject Name="token" Type="FieldArgument">
+                                                                                              <isactr:FieldObject.Value>
+                                                                                                <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
+                                                                                              </isactr:FieldObject.Value>
+                                                                                            </isactr:FieldObject>
+                                                                                            <isactr:FieldObject Name="user" Type="FieldArgument">
+                                                                                              <isactr:FieldObject.Value>
+                                                                                                <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
+                                                                                              </isactr:FieldObject.Value>
+                                                                                            </isactr:FieldObject>
+                                                                                            <isactr:FieldObject Name="url_title" Type="FieldArgument">
+                                                                                              <isactr:FieldObject.Value>
+                                                                                                <InArgument x:TypeArguments="x:String" />
+                                                                                              </isactr:FieldObject.Value>
+                                                                                            </isactr:FieldObject>
+                                                                                            <isactr:FieldObject Name="url" Type="FieldArgument">
+                                                                                              <isactr:FieldObject.Value>
+                                                                                                <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
+                                                                                              </isactr:FieldObject.Value>
+                                                                                            </isactr:FieldObject>
+                                                                                          </isactr:ConnectorActivity.FieldObjects>
+                                                                                        </isactr:ConnectorActivity>
                                                                                       </Sequence>
                                                                                     </If.Then>
                                                                                     <If.Else>
-                                                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1438,30 +1456,51 @@
                                                                                 </Sequence>
                                                                               </If.Then>
                                                                               <If.Else>
-                                                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,317" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,498" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Notification for non-fullpage checks" DisplayName="Send Notification" sap:VirtualizedContainerService.HintSize="354,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\CM3\Send Push Notification.xaml">
-                                                                                    <ui:InvokeWorkflowFile.Arguments>
-                                                                                      <InArgument x:TypeArguments="x:String" x:Key="in_apikey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
-                                                                                      <InArgument x:TypeArguments="x:String" x:Key="in_userkey">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
-                                                                                      <InArgument x:TypeArguments="x:String" x:Key="in_message">[clean_llm_output + Environment.NewLine + Environment.NewLine + "OLD:" + Environment.NewLine + most_recent_change_history.Value]</InArgument>
-                                                                                      <InArgument x:TypeArguments="x:String" x:Key="in_title">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
-                                                                                      <InArgument x:TypeArguments="x:String" x:Key="in_url">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
-                                                                                      <OutArgument x:TypeArguments="x:String" x:Key="out_Response" />
-                                                                                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_ResponseStatus" />
-                                                                                    </ui:InvokeWorkflowFile.Arguments>
-                                                                                    <sap:WorkflowViewStateService.ViewState>
-                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                                      </scg:Dictionary>
-                                                                                    </sap:WorkflowViewStateService.ViewState>
-                                                                                  </ui:InvokeWorkflowFile>
+                                                                                  <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACr2VQW/iMBCF/0rkc9oClfaAtIeSqioqLFFhe1lVaAhD4iaxs/aYbRb1v++EhIiUSpVWoieUZ/v5e/Z42Ik7idnaBloRSIVGDHdijmCiBFYZ1oNi+OvZF2NVOGqFnfgBOYqhSCjPhC9upS0yKN+JaCMjC5JasdjzvntTtBZi9MB6YcYbegt8Jd/rd4fuF9MJL1+URWUmFWHMZL640yYHqqXrQb2BjNl7JyYa1qPyFjfgMp5BxuGbLx7xt5MG17XABhX+REfQII30uhRvfhsmrxlO8hzpnUihs4mnNMmNrD29VeXYolsyUsVnACVJ2Slmq34CeZh3dkqdojqlPKgdypuiyA58KX7FGTq7L6ou3EHssP1k8augzOlrarQu0uPkP2g+3N0XMxWA2oI9zDumWX5cap2RDtmiUj298c6JyP1o5ui4IT3z2rGyBCrCEAxTEhoe2Ikn/q29+pe9yx6bcbdTGJE2D3ynQxE5Szq/WIMxqKIEVXxR8JvR230p3EQkt5LKJkjgDBDfJwOsXtikOY/+sukRdvlieTNf3BMVU6RE892LUFviaxYBsD/H06krniBzWBG2+sjoP1xqY8K80UMjczAlczZdOIQo5V2OM33rZmqAqlffJGiHjlcN9qvqDN2rbRqx/TzirEA+jNoxMMjncpJ7Nl+wFgIl/HXVv3pvMQEVu6q1DsW+KUzhNeTPufzL0qDXYz+wI/ZOuXyChGdXR7aBzPJjqv48RpmO0roA/gGNyL6XzQYAAA==" ConnectionId="94926e8a-3eb1-4b67-aebe-c677dd8f749a" DisplayName="Send Pushover Message" sap:VirtualizedContainerService.HintSize="354,410" sap2010:WorkflowViewState.IdRef="ConnectorActivity_8" UiPathActivityTypeId="225a921d-98be-32fb-ac54-c05912d45252">
+                                                                                    <isactr:ConnectorActivity.FieldObjects>
+                                                                                      <isactr:FieldObject Name="html" Type="FieldArgument">
+                                                                                        <isactr:FieldObject.Value>
+                                                                                          <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                                                                        </isactr:FieldObject.Value>
+                                                                                      </isactr:FieldObject>
+                                                                                      <isactr:FieldObject Name="message" Type="FieldArgument">
+                                                                                        <isactr:FieldObject.Value>
+                                                                                          <InArgument x:TypeArguments="x:String">[clean_llm_output + Environment.NewLine + Environment.NewLine + "&lt;b&gt;OLD:&lt;/b&gt;" + Environment.NewLine + most_recent_change_history.Value]</InArgument>
+                                                                                        </isactr:FieldObject.Value>
+                                                                                      </isactr:FieldObject>
+                                                                                      <isactr:FieldObject Name="title" Type="FieldArgument">
+                                                                                        <isactr:FieldObject.Value>
+                                                                                          <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.Name + " (" + GlobalVariablesNamespace.GlobalVariables.record.Site + ")"]</InArgument>
+                                                                                        </isactr:FieldObject.Value>
+                                                                                      </isactr:FieldObject>
+                                                                                      <isactr:FieldObject Name="token" Type="FieldArgument">
+                                                                                        <isactr:FieldObject.Value>
+                                                                                          <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.APIKey]</InArgument>
+                                                                                        </isactr:FieldObject.Value>
+                                                                                      </isactr:FieldObject>
+                                                                                      <isactr:FieldObject Name="user" Type="FieldArgument">
+                                                                                        <isactr:FieldObject.Value>
+                                                                                          <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.PushoverKey.UserKey]</InArgument>
+                                                                                        </isactr:FieldObject.Value>
+                                                                                      </isactr:FieldObject>
+                                                                                      <isactr:FieldObject Name="url_title" Type="FieldArgument">
+                                                                                        <isactr:FieldObject.Value>
+                                                                                          <InArgument x:TypeArguments="x:String" />
+                                                                                        </isactr:FieldObject.Value>
+                                                                                      </isactr:FieldObject>
+                                                                                      <isactr:FieldObject Name="url" Type="FieldArgument">
+                                                                                        <isactr:FieldObject.Value>
+                                                                                          <InArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.record.MainURL]</InArgument>
+                                                                                        </isactr:FieldObject.Value>
+                                                                                      </isactr:FieldObject>
+                                                                                    </isactr:ConnectorActivity.FieldObjects>
+                                                                                  </isactr:ConnectorActivity>
                                                                                 </Sequence>
                                                                               </If.Else>
                                                                             </If>
@@ -1563,16 +1602,16 @@
                                                                               </uda:CreateEntityRecord.State>
                                                                             </uda:CreateEntityRecord>
                                                                             <FlowStep.Next>
-                                                                              <FlowDecision x:Name="__ReferenceID12" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PostProcess &lt;&gt; &quot;&quot;]" DisplayName="Post-Process Specified?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
+                                                                              <FlowDecision x:Name="__ReferenceID12" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PostProcess &lt;&gt; &quot;&quot;]" DisplayName="Post-Process Specified?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                     <av:Point x:Key="ShapeLocation">890,2160</av:Point>
-                                                                                    <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                                                                    <av:Size x:Key="ShapeSize">59,59</av:Size>
                                                                                     <x:String x:Key="TrueLabel">Yes</x:String>
                                                                                     <x:String x:Key="FalseLabel">No</x:String>
-                                                                                    <av:PointCollection x:Key="TrueConnector">950,2190 1090,2190 1090,2235</av:PointCollection>
-                                                                                    <av:PointCollection x:Key="FalseConnector">920,2220 920,2325</av:PointCollection>
+                                                                                    <av:PointCollection x:Key="TrueConnector">949,2189.5 1090,2189.5 1090,2235</av:PointCollection>
+                                                                                    <av:PointCollection x:Key="FalseConnector">919.5,2219 919.5,2249 920,2249 920,2325</av:PointCollection>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                 <FlowDecision.True>
