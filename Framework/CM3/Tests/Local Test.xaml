@@ -79,7 +79,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flow - Invoke Workflow File (Framework\CM3\CM3 Flow.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\CM3 Flow.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="id">fbe48cf0-c342-ef11-86c3-000d3aba2fb2</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="id">6308f210-5f43-ef11-86c3-000d3aba2fb2</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>

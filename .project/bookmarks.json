@@ -1,0 +1,24 @@
+{
+  "Value": {
+    "Framework/CM3/CM3 Flowchart.xaml": [
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "ede3fdec-37d6-4b2a-9932-9d2914984242",
+        "ActivityIdRef": "RetryScope_3",
+        "ActivityId": "1.1362",
+        "ActivityName": "Retry Scope",
+        "IsTransient": false
+      },
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "32e907ae-12fe-4f5a-abac-b39f6d3d8065",
+        "ActivityIdRef": "Assign_20",
+        "ActivityId": "1.1124",
+        "ActivityName": "Assign",
+        "IsTransient": false
+      }
+    ]
+  }
+}
