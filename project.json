@@ -24,7 +24,7 @@
   ],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.7.0",
-  "projectVersion": "1.0.116",
+  "projectVersion": "1.0.118",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -52,41 +52,10 @@
     },
     "processOptions": {
       "ignoredFiles": [
-        "screenshot.png",
-        "Mocks/Framework/CM3/CM3 Flow_mock.xaml",
-        "Mocks/Framework/CM3/CM3 Flowchart_mock.xaml"
+        "screenshot.png"
       ]
     },
-    "fileInfoCollection": [
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "a247813e-8047-4a07-bfde-4a5409c8e310",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "Framework\\CM3\\Tests\\TC01 - Pre and Post Processes Initial Run.xaml"
-      },
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "d64cfde3-2043-4008-ad54-8a5309fa6725",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "Framework\\CM3\\Tests\\TC02 - FPC Initial Run + Prompt Template.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "f2ad612f-86be-4139-8fcb-fb675f10d5b0",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "Framework\\CM3\\Tests\\Local Test.xaml"
-      },
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "9f950cfe-6dae-4602-86db-71c95aaf8cd6",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "Framework\\CM3\\Tests\\TC03 - Prompt Template with No Change.xaml"
-      }
-    ],
+    "fileInfoCollection": [],
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",

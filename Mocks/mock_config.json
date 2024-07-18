@@ -1,12 +1,3 @@
 {
-  "mockedWorkflows": [
-    {
-      "mockFilePath": "Mocks\\Framework\\CM3\\CM3 Flow_mock.xaml",
-      "sourceWorkflowPath": "Framework\\CM3\\CM3 Flow.xaml"
-    },
-    {
-      "mockFilePath": "Mocks\\Framework\\CM3\\CM3 Flowchart_mock.xaml",
-      "sourceWorkflowPath": "Framework\\CM3\\CM3 Flowchart.xaml"
-    }
-  ]
+  "mockedWorkflows": []
 }
