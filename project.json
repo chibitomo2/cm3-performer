@@ -52,7 +52,8 @@
     },
     "processOptions": {
       "ignoredFiles": [
-        "screenshot.png"
+        "screenshot.png",
+        "Framework/CM3/Local Test.xaml"
       ]
     },
     "fileInfoCollection": [],
