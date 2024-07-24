@@ -52,11 +52,17 @@
     },
     "processOptions": {
       "ignoredFiles": [
-        "screenshot.png",
-        "Framework/CM3/Local Test.xaml"
+        "screenshot.png"
       ]
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "a442ba57-ff81-4cef-b511-9a6220834186",
+        "testCaseType": "TestCase",
+        "fileName": "Framework\\CM3\\Local Test.xaml"
+      }
+    ],
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
