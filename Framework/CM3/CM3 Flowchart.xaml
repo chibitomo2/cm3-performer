@@ -144,7 +144,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="781,464" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="801,464" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The text copied from the website in the current check." Name="new_text" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The text content of the most recent storage file for FPC, set by &quot;Old vs New Diff.xaml&quot;" Name="old_text" />
@@ -1963,7 +1963,7 @@
                                     <av:PointCollection x:Key="ConnectorLocation">1180,935 1180,1530 875,1530</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="check + prompt template + vision" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                <Sequence DisplayName="check + prompt template + vision" sap:VirtualizedContainerService.HintSize="654,2777.5" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1987,10 +1987,10 @@
                                       <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:RetryScope sap2010:Annotation.AnnotationText="Generate LLM output and verify it meets the structure defined by the output regex. If it does not, retry up to 5 times." DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="592,2192.5" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="5">
+                                  <ui:RetryScope sap2010:Annotation.AnnotationText="Generate LLM output and verify it meets the structure defined by the output regex. If it does not, retry up to 5 times." DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="592,2193.5" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="5">
                                     <ui:RetryScope.ActivityBody>
                                       <ActivityAction>
-                                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="550,1835.5" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="550,1836.5" sap2010:WorkflowViewState.IdRef="Sequence_58">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2035,7 +2035,7 @@
                                               </isactr:FieldObject>
                                               <isactr:FieldObject Name="prompt" Type="FieldArgument">
                                                 <isactr:FieldObject.Value>
-                                                  <InArgument x:TypeArguments="x:String">[record.PromptTemplate.Prompt]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String">[record.PromptTemplate.Prompt + Environment.NewLine + Environment.NewLine + "### Text" + Environment.NewLine + new_text]</InArgument>
                                                 </isactr:FieldObject.Value>
                                               </isactr:FieldObject>
                                               <isactr:FieldObject Name="image_type" Type="FieldArgument">
@@ -2112,7 +2112,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </isactr:ConnectorActivity>
-                                          <TryCatch sap2010:Annotation.AnnotationText="Apply Output Regex to text, if defined" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488,719" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                          <TryCatch sap2010:Annotation.AnnotationText="Apply Output Regex to text, if defined" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488,720" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2121,7 +2121,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <TryCatch.Try>
-                                              <If Condition="[Not String.IsNullOrEmpty(record.PromptTemplate.OutputRegex)]" sap:VirtualizedContainerService.HintSize="450,433" sap2010:WorkflowViewState.IdRef="If_11">
+                                              <If Condition="[Not String.IsNullOrEmpty(record.PromptTemplate.OutputRegex)]" sap:VirtualizedContainerService.HintSize="450,434" sap2010:WorkflowViewState.IdRef="If_11">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2342,10 +2342,10 @@
                                       <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:RetryScope sap2010:Annotation.AnnotationText="Generate LLM output and verify it meets the structure defined by the output regex. If it does not, retry up to 5 times." DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="592,2219.5" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="5">
+                                  <ui:RetryScope sap2010:Annotation.AnnotationText="Generate LLM output and verify it meets the structure defined by the output regex. If it does not, retry up to 5 times." DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="592,2225.5" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="5">
                                     <ui:RetryScope.ActivityBody>
                                       <ActivityAction>
-                                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="550,1862.5" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="550,1866.5" sap2010:WorkflowViewState.IdRef="Sequence_55">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2458,7 +2458,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </isactr:ConnectorActivity>
-                                          <TryCatch sap2010:Annotation.AnnotationText="Apply Output Regex to text, if defined" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488,719" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                          <TryCatch sap2010:Annotation.AnnotationText="Apply Output Regex to text, if defined" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488,723" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2467,7 +2467,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <TryCatch.Try>
-                                              <If Condition="[Not String.IsNullOrEmpty(record.PromptTemplate.OutputRegex)]" sap:VirtualizedContainerService.HintSize="450,433" sap2010:WorkflowViewState.IdRef="If_10">
+                                              <If Condition="[Not String.IsNullOrEmpty(record.PromptTemplate.OutputRegex)]" sap:VirtualizedContainerService.HintSize="450,436" sap2010:WorkflowViewState.IdRef="If_10">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2475,13 +2475,13 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <If.Then>
-                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,272" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:LogMessage sap2010:Annotation.AnnotationText="validating against output regex" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,99" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="[&quot;Validating against output regex&quot;]">
+                                                    <ui:LogMessage sap2010:Annotation.AnnotationText="validating against output regex" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,101" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="[&quot;Validating against output regex&quot;]">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2506,7 +2506,7 @@
                                               </If>
                                             </TryCatch.Try>
                                             <TryCatch.Catches>
-                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,23" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2517,7 +2517,7 @@
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                   </ActivityAction.Argument>
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;No prompt template defined for output regex&quot;]" />
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;No prompt template defined for output regex&quot;]" />
                                                 </ActivityAction>
                                               </Catch>
                                             </TryCatch.Catches>
@@ -2527,7 +2527,7 @@
                                     </ui:RetryScope.ActivityBody>
                                     <ui:RetryScope.Condition>
                                       <ActivityFunc x:TypeArguments="x:Boolean">
-                                        <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Check True" Expression="[llm_output.text.Length &gt; 0]" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
+                                        <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Check True" Expression="[llm_output.text.Length &gt; 0]" sap:VirtualizedContainerService.HintSize="334,131" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
                                       </ActivityFunc>
                                     </ui:RetryScope.Condition>
                                     <sap:WorkflowViewStateService.ViewState>
@@ -2549,7 +2549,7 @@
                                     <av:PointCollection x:Key="ConnectorLocation">1020,935 1020,1530 875,1530</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="check + custom prompt" sap:VirtualizedContainerService.HintSize="450,780.5" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                <Sequence DisplayName="check + custom prompt" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
