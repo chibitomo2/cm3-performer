@@ -116,7 +116,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="552,2065.5" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flowchart - Invoke Workflow File (Framework\CM3\CM3 Flowchart.xaml)" sap:VirtualizedContainerService.HintSize="334,175" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\CM3 Flowchart.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CM3 Flowchart - Invoke Workflow File (Framework\CM3\CM3 Flowchart.xaml)" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\CM3\CM3 Flowchart.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="id">[id]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="storage_bucket" />
@@ -172,7 +172,7 @@
                         </isactr:FieldObject>
                         <isactr:FieldObject Name="message" Type="FieldArgument">
                           <isactr:FieldObject.Value>
-                            <InArgument x:TypeArguments="x:String">ERROR</InArgument>
+                            <InArgument x:TypeArguments="x:String">["ERROR: " + exception.Message]</InArgument>
                           </isactr:FieldObject.Value>
                         </isactr:FieldObject>
                         <isactr:FieldObject Name="title" Type="FieldArgument">
