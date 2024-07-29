@@ -70,6 +70,7 @@
       <x:String>UiPath.Platform</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
       <x:String>UiPath.IntegrationService.Activities.SWEntities.CC3F56454ED_v2_sub_chat_sub_completion_Create.Bundle</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -1369,13 +1370,13 @@
                                                                     <av:PointCollection x:Key="ConnectorLocation">820,1675 820,1705 819.5,1705 819.5,1730</av:PointCollection>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <Sequence DisplayName="Clean Up LLM Output" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                                                <Sequence DisplayName="Clean Up LLM Output" sap:VirtualizedContainerService.HintSize="496,619" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <Assign sap2010:Annotation.AnnotationText="Replace all long dashes with short dashes" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                                                  <Assign sap2010:Annotation.AnnotationText="Replace all long dashes with short dashes" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_16">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="x:String">[clean_llm_output]</OutArgument>
                                                                     </Assign.To>
@@ -1388,32 +1389,39 @@
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                   </Assign>
-                                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Info" Message="[&quot;LLM Output: &quot; + clean_llm_output]" />
+                                                                  <uast:ChangeCase ChangeCaseOptions="LowerCase" DisplayName="Change to Lower Case" sap:VirtualizedContainerService.HintSize="434,222" sap2010:WorkflowViewState.IdRef="ChangeCase_2" Result="[clean_llm_output]" Source="[clean_llm_output]">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                  </uast:ChangeCase>
+                                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Info" Message="[&quot;LLM Output: &quot; + clean_llm_output]" />
                                                                 </Sequence>
                                                                 <FlowStep.Next>
-                                                                  <FlowDecision x:Name="__ReferenceID37" Condition="[cbool(GlobalVariablesNamespace.GlobalVariables.record.FullPageCheck)]" DisplayName="FPC?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
+                                                                  <FlowDecision x:Name="__ReferenceID37" Condition="[cbool(GlobalVariablesNamespace.GlobalVariables.record.FullPageCheck)]" DisplayName="FPC?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         <av:Point x:Key="ShapeLocation">790,1730</av:Point>
-                                                                        <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                                                        <av:Size x:Key="ShapeSize">59,59</av:Size>
                                                                         <x:String x:Key="TrueLabel">Yes</x:String>
                                                                         <x:String x:Key="FalseLabel">No</x:String>
-                                                                        <av:PointCollection x:Key="TrueConnector">790,1760 570,1760</av:PointCollection>
-                                                                        <av:PointCollection x:Key="FalseConnector">850,1760 1060,1760</av:PointCollection>
+                                                                        <av:PointCollection x:Key="TrueConnector">790,1759.5 569,1759.5</av:PointCollection>
+                                                                        <av:PointCollection x:Key="FalseConnector">849,1759.5 1060,1759.5</av:PointCollection>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                     <FlowDecision.True>
-                                                                      <FlowDecision x:Name="__ReferenceID38" Condition="[old_text &lt;&gt; new_text]" DisplayName="FPC Change Present?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
+                                                                      <FlowDecision x:Name="__ReferenceID38" Condition="[old_text &lt;&gt; new_text]" DisplayName="FPC Change Present?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                             <av:Point x:Key="ShapeLocation">510,1730</av:Point>
-                                                                            <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                                                            <av:Size x:Key="ShapeSize">59,59</av:Size>
                                                                             <x:String x:Key="TrueLabel">Yes</x:String>
                                                                             <x:String x:Key="FalseLabel">No</x:String>
                                                                             <av:PointCollection x:Key="TrueConnector">510,1759.5 480,1759.5 480,1760 365,1760</av:PointCollection>
-                                                                            <av:PointCollection x:Key="FalseConnector">540,1790 540,1900 765,1900</av:PointCollection>
+                                                                            <av:PointCollection x:Key="FalseConnector">539.5,1789 539.5,1900 765,1900</av:PointCollection>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <FlowDecision.True>
@@ -1709,16 +1717,16 @@
                                                                       </FlowDecision>
                                                                     </FlowDecision.True>
                                                                     <FlowDecision.False>
-                                                                      <FlowDecision x:Name="__ReferenceID39" Condition="[most_recent_change_history.Value &lt;&gt; clean_llm_output]" DisplayName="Change Present?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
+                                                                      <FlowDecision x:Name="__ReferenceID39" Condition="[most_recent_change_history.Value &lt;&gt; clean_llm_output]" DisplayName="Change Present?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                             <av:Point x:Key="ShapeLocation">1060,1730</av:Point>
-                                                                            <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                                                            <av:Size x:Key="ShapeSize">59,59</av:Size>
                                                                             <x:String x:Key="TrueLabel">Yes</x:String>
                                                                             <x:String x:Key="FalseLabel">No</x:String>
-                                                                            <av:PointCollection x:Key="TrueConnector">1120,1760 1225,1760</av:PointCollection>
-                                                                            <av:PointCollection x:Key="FalseConnector">1090,1790 1090,1900 875,1900</av:PointCollection>
+                                                                            <av:PointCollection x:Key="TrueConnector">1119,1759.5 1149,1759.5 1149,1760 1225,1760</av:PointCollection>
+                                                                            <av:PointCollection x:Key="FalseConnector">1089.5,1789 1089.5,1900 875,1900</av:PointCollection>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <FlowDecision.True>
@@ -2236,7 +2244,7 @@
                                         <av:PointCollection x:Key="ConnectorLocation">1340,935 1340,1530 875,1530</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence DisplayName="check + custom prompt + vision" sap:VirtualizedContainerService.HintSize="450,824" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                    <Sequence DisplayName="check + custom prompt + vision" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
