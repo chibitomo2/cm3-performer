@@ -145,7 +145,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="1933,1146" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="CM3Flow" sap:VirtualizedContainerService.HintSize="886,643" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The text copied from the website in the current check." Name="new_text" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The text content of the most recent storage file for FPC, set by &quot;Old vs New Diff.xaml&quot;" Name="old_text" />
@@ -329,16 +329,16 @@
         </ui:LogMessage>
       </Sequence>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID18" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PreProcess &lt;&gt; &quot;&quot;]" DisplayName="Pre-Process Specified?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID18" Condition="[GlobalVariablesNamespace.GlobalVariables.record.PreProcess &lt;&gt; &quot;&quot;]" DisplayName="Pre-Process Specified?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">890,240</av:Point>
-              <av:Size x:Key="ShapeSize">59,59</av:Size>
+              <av:Size x:Key="ShapeSize">60,60</av:Size>
               <av:PointCollection x:Key="TrueConnector">890,269.5 740,269.5 740,355</av:PointCollection>
               <x:String x:Key="TrueLabel">Yes</x:String>
               <x:String x:Key="FalseLabel">No</x:String>
-              <av:PointCollection x:Key="FalseConnector">919.5,299 919.5,329 920,329 920,355</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">920,300 920,355</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -615,13 +615,13 @@
                           <av:PointCollection x:Key="ConnectorLocation">920,525 920,555</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Trim Copied Text" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <Sequence DisplayName="Trim Copied Text" sap:VirtualizedContainerService.HintSize="512,1446" sap2010:WorkflowViewState.IdRef="Sequence_37">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <TryCatch sap2010:Annotation.AnnotationText="Apply Regex to text, if defined" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488,631" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                        <TryCatch sap2010:Annotation.AnnotationText="Apply Prompt Template Regex to text, if defined" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,443" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -630,7 +630,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <If Condition="[Not String.IsNullOrEmpty(record.PromptTemplate.Regex)]" sap:VirtualizedContainerService.HintSize="450,335" sap2010:WorkflowViewState.IdRef="If_4">
+                            <If Condition="[Not String.IsNullOrEmpty(record.PromptTemplate.Regex)]" sap:VirtualizedContainerService.HintSize="450,739" sap2010:WorkflowViewState.IdRef="If_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -638,32 +638,34 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,346" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_47" Level="Info" Message="[&quot;Trimming text using prompt template trim regex: &quot; + record.PromptTemplate.Regex]" />
                                   <ui:Matches DisplayName="Find Matching Patterns" FirstMatch="[new_text]" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[new_text]" IsBuilderTabModified="False" Pattern="[record.PromptTemplate.Regex]" RegexOption="IgnoreCase, Compiled" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="Info" Message="[&quot;No prompt template trim regex&quot;]" />
                                 </Sequence>
                               </If.Else>
                             </If>
                           </TryCatch.Try>
                           <TryCatch.Catches>
-                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,23" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,214" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -671,12 +673,69 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                 </ActivityAction.Argument>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;No prompt template defined for Remove Text Before&quot;]" />
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;Error applying prompt template trim regex&quot;]" />
                               </ActivityAction>
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <If sap2010:Annotation.AnnotationText="Display trimmed text if the check is not a FPC" Condition="[not cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="488,470" sap2010:WorkflowViewState.IdRef="If_6">
+                        <TryCatch sap2010:Annotation.AnnotationText="Apply Custom Prompt Regex to text, if defined" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,443" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <TryCatch.Try>
+                            <If Condition="[Not String.IsNullOrEmpty(record.InputTrimRegex)]" sap:VirtualizedContainerService.HintSize="450,739" sap2010:WorkflowViewState.IdRef="If_20">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,346" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Info" Message="[&quot;Trimming text using custom prompt trim regex: &quot; + record.InputTrimRegex]" />
+                                  <ui:Matches DisplayName="Find Matching Patterns" FirstMatch="[new_text]" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="Matches_5" Input="[new_text]" IsBuilderTabModified="False" Pattern="[record.InputTrimRegex]" RegexOption="IgnoreCase, Compiled" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_49" Level="Info" Message="[&quot;No custom prompt trim regex&quot;]" />
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </TryCatch.Try>
+                          <TryCatch.Catches>
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,214" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ActivityAction x:TypeArguments="s:Exception">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                </ActivityAction.Argument>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_45" Level="Info" Message="[&quot;Error applying custom prompt trim regex&quot;]" />
+                              </ActivityAction>
+                            </Catch>
+                          </TryCatch.Catches>
+                        </TryCatch>
+                        <If sap2010:Annotation.AnnotationText="Display trimmed text if the check is not a FPC" Condition="[not cbool(record.FullPageCheck)]" sap:VirtualizedContainerService.HintSize="450,472" sap2010:WorkflowViewState.IdRef="If_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -685,13 +744,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_42">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;Copied Text: &quot; + new_text]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;Copied Text: &quot; + new_text]" />
                             </Sequence>
                           </If.Then>
                           <If.Else>

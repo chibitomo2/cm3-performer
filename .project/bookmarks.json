@@ -1,24 +1,3 @@
 {
-  "Value": {
-    "Framework/CM3/CM3 Flowchart.xaml": [
-      {
-        "IsEnabled": true,
-        "Annotation": null,
-        "Id": "29aaa3e6-7875-4d24-90b2-816a46df1846",
-        "ActivityIdRef": "ConnectorActivity_6",
-        "ActivityId": "1.1800",
-        "ActivityName": "Generate Chat Completion",
-        "IsTransient": false
-      },
-      {
-        "IsEnabled": true,
-        "Annotation": null,
-        "Id": "710bc19f-552c-400c-bff8-a4f8c70b177b",
-        "ActivityIdRef": "ConnectorActivity_5",
-        "ActivityId": "1.1215",
-        "ActivityName": "Generate Chat Completion",
-        "IsTransient": false
-      }
-    ]
-  }
+  "Value": {}
 }
